@@ -1,6 +1,6 @@
 <article>
   <header>
-    <time datetime="{{ post.date | date: "%d %B %Y" }}">{{ post.date | date: "%d %B %Y" }}</time>
+    <time>{{ post.date | date: "%d %B %Y" }}</time>
     <a href="{{ post.url }}">{{ post.title }}</a>
   </header>
   {% if post.excerpt %}

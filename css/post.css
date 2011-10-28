@@ -1,0 +1,35 @@
+article {
+  font: Verdana, Helvetica, Arial, sans-serif;
+}
+.post-title {
+  font: 2em Helvetica, Arial, sans-serif;
+  margin: 1em 0 0.3em 0;
+}
+.post > header p {
+  font-size: 0.85em;
+  text-align: right;
+}
+ul.tags:before {
+  content: "Tags: ";
+  font-weight: bolder;
+}
+ul.tags {
+  background-color: whiteSmoke;
+  border-radius: 5px;
+  font-size: 0.85em;
+  list-style-type: none;
+  padding: 2px 2em;
+}
+ul.tags li {
+  background-color: #FFF;
+  border: #E5E5E5 1px solid;
+  border-radius: 3px;
+  display: inline-block;
+  margin: 0 0.2em;
+  padding: 1px 5px;
+}
+ul.tags a {
+  color: #7F1D1D;
+  font-weight: bold;
+  text-decoration: none;
+}

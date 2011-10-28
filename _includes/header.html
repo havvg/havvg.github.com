@@ -1,0 +1,15 @@
+<header>
+  <h1>havvg's playground</h1>
+  <p>Developing software is fun!</p>
+  {% if site.navigation %}
+  <nav>
+    {% for link in site.navigation %}
+      {% assign current = nil %}
+      {% if page.url == link.url or page.layout == link.layout %}
+        {% assign current = 'active' %}
+      {% endif %}
+      <a {% if current %}class="{{ current }}"{% endif %} href="{{ link.url }}">{{ link.text }}</a>
+    {% endfor %}
+  </nav>
+  {% endif %}
+</header>

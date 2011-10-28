@@ -1,0 +1,121 @@
+.markdown h2 {
+  border-bottom: 3px solid #DDD;
+  font-weight: bold;
+  font-size: 1.8em;
+  margin:1.5em 0 0.8em 0;
+  padding-top:10px;
+}
+
+.markdown h2 .link {
+  color: #000;
+  text-decoration: none;
+}
+
+.markdown h3 {
+  color: #000;
+  font-size: 1.6em;
+  margin: 1em 0 0.5em 0;
+}
+
+.markdown h4 {
+  color: #000;
+  font-size: 1.2em;
+  font-style: italic;
+  margin: 1.5em 0 1em 0;
+}
+
+.markdown h5 {
+  font-weight: bold;
+}
+
+.markdown em {
+  font-style: italic;
+}
+
+.markdown strong {
+  font-weight: bold;
+}
+
+.markdown ul {
+  margin-bottom: 1em;
+}
+
+.markdown ul li {
+  list-style: disc inside;
+  margin-bottom: 10px;
+}
+
+.markdown ul li li {
+  list-style: circle inside;
+  margin-left: 1em;
+}
+
+.markdown ol li {
+  list-style: decimal inside;
+  margin-bottom: 1em;
+}
+
+.markdown li p {
+    display: inline;
+}
+
+.markdown pre {
+  background: #222;
+  color: #FFF;
+  font-family: "Bitstream Vera Sans Mono", monospace;
+  margin-bottom: 1em;
+  max-width: 100%;
+  overflow-y: auto;
+  padding: 5px;
+}
+
+.markdown blockquote {
+  background: #F8F8FF;
+  border: 1px solid #ddddee;
+  color: #222;
+  margin: 1em 40px;
+  padding: 10px;
+  padding-bottom: 0px;
+}
+
+.markdown blockquote strong {
+  background: #ddddee url(../images/info.png) top left no-repeat;
+  background-position: 5px 2px;
+  display: block;
+  letter-spacing: 1px;
+  margin: -10px -10px;
+  padding: 10px 0 10px 50px;
+}
+
+.markdown table {
+  font-size: 1em;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.markdown tbody tr td {
+  border-bottom: 1px solid #ccc;
+  padding: 4px 10px 4px 5px;
+}
+
+.markdown thead tr th {
+  background: #eee;
+  padding: 1em;
+}
+
+.markdown img {
+  display: block;
+  margin:0.5em auto;
+  max-width:100%;
+  text-align: center;
+}
+
+.markdown img.inline {
+  border: none;
+  margin: 0 0.5em;
+  vertical-align: middle;
+}
+
+.markdown a {
+    text-decoration: underline;
+}

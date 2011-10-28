@@ -1,0 +1,36 @@
+/* Typeface by http://www.tenbytwenty.com/ */
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Jura Regular'),
+    local('Jura-Regular'),
+    url('../typeface/jura/Jura-Regular.ttf');
+}
+@font-face {
+  font-family: 'Jura';
+  font-style: italic;
+  src: 
+    local('Jura Italic'),
+    local('Jura-Italic'),
+    url('../typeface/jura/Jura-Italic.ttf');
+}
+@font-face {
+  font-family: 'Jura';
+  font-style: normal;
+  font-weight: bold;
+  src: 
+    local('Jura Bold'),
+    local('Jura-Bold'),
+    url('../typeface/jura/Jura-Bold.ttf');
+}
+@font-face {
+  font-family: 'Jura';
+  font-style: italic;
+  font-weight: bold;
+  src: 
+    local('Jura BoldItalic'),
+    local('Jura-BoldItalic'),
+    url('../typeface/jura/Jura-BoldItalic.ttf');
+}

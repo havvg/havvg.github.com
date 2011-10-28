@@ -1,0 +1,11 @@
+<article>
+  <header>
+    <time datetime="{{ post.date | date: "%d %B %Y" }}">{{ post.date | date: "%d %B %Y" }}</time>
+    <a href="{{ post.url }}">{{ post.title }}</a>
+  </header>
+  {% if post.excerpt %}
+  <section>
+    {{ post.excerpt | markdownify }}
+  </section>
+  {% endif %}
+</article>

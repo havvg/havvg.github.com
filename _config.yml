@@ -6,3 +6,8 @@ navigation:
     url: /index.html
   - text: Archive
     url: /archive.html
+baseurl: http://havvg.github.com
+author:
+  name: Toni Uebernicke
+  email: tuebernickel@gmail.com
+  nick: havvg

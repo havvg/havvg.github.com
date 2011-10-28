@@ -1,5 +1,5 @@
 safe: true
-lsi: false
+lsi: true
 pygments: true
 navigation:
   - text: Home

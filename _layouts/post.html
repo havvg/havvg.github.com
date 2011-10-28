@@ -12,13 +12,26 @@ layout: base
     {{ content }}
   </section>
 
+  <footer>
   {% if page.tags %}
-    <footer>
-    <ul class="tags">
-    {% for tag in page.tags %}
-      <li><a href="/">{{ tag }}</a></li>
-    {% endfor %}
-    </ul>
-    </footer>
+    <section>
+      <h1>Tags</h1>
+      <ul class="tags">
+      {% for tag in page.tags %}
+        <li><a href="/">{{ tag }}</a></li>
+      {% endfor %}
+      </ul>
+    </section>
   {% endif %}
+  {% if site.related_posts %}
+    <section>
+      <h1>Related Posts</h1>
+      <ul class="posts">
+        {% for post in site.related_posts limit:5 %}
+        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+      </ul>
+    </section>
+  {% endif %}
+  </footer>
 </article>

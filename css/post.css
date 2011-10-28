@@ -29,18 +29,27 @@ article section.excerpt {
   font-size: 0.85em;
   text-align: right;
 }
-ul.tags:before {
-  content: "Tags: ";
-  font-weight: bolder;
-}
-ul.tags {
+.post > footer section {
   background-color: whiteSmoke;
   border-radius: 5px;
   font-size: 0.85em;
-  list-style-type: none;
+  margin-bottom: 1em;
   padding: 2px 2em;
 }
-ul.tags li {
+.post > footer h1  {
+  display: inline-block;
+  float: left;
+  font-weight: bolder;
+  padding: 2px;
+}
+.post > footer h1:after {
+  content: ": ";
+  margin-right: 1em;
+}
+.post > footer ul {
+  list-style-type: none;
+}
+.post > footer ul li {
   background-color: #FFF;
   border: #E5E5E5 1px solid;
   border-radius: 3px;
@@ -48,7 +57,7 @@ ul.tags li {
   margin: 0 0.2em;
   padding: 1px 5px;
 }
-ul.tags a {
+.post > footer ul a {
   color: #7F1D1D;
   font-weight: bold;
   text-decoration: none;

@@ -6,10 +6,23 @@ navigation:
     url: /index.html
   - text: Archive
     url: /archive.html
+  - text: Imprint
+    url: /imprint.html
 baseurl: http://havvg.github.com
 author:
   name: Toni Uebernickel
   email: tuebernickel@gmail.com
   nick: havvg
+  profiles:
+    - label: XING
+      url: https://www.xing.com/profile/Toni_Uebernickel
+    - label: facebook
+      url: https://www.facebook.com/toni.uebernickel
+    - label: flickr
+      url: http://www.flickr.com/photos/toni-uebernickel/
+    - label: twitter
+      url: https://twitter.com/havvg/
+    - label: YouTube
+      url: https://www.youtube.com/user/havvg
 title: havvg's playground
 strapline: Developing Software is Fun!

@@ -7,13 +7,29 @@ body {
   height: 100%;
   margin: 0 auto;
   padding: 0 0 2em 0;
-  width: 85%;
+  width: 100%;
+}
+address {
+    font-style: normal;
+    padding: 0px 0px 0px 10px;
+    margin: 0px 0px 10px 0px;
+    width: 250px;
+}
+address > span,
+address a,
+address span.street-address,
+address span.country-name {
+    display: block;
 }
 a {
   color: #04C;
 }
 a:hover {
   color: #37F;
+}
+figcaption {
+  font-size: 0.8em;
+  text-align: center;
 }
 p {
   margin-bottom: 0.8em;
@@ -71,7 +87,7 @@ body > aside {
   width: 75%;
 }
 body > aside {
-  width: auto;
+  width: 20%;
 }
 body > footer {
   background: url('/images/github-footer-logo.svg') 10px 5px no-repeat;

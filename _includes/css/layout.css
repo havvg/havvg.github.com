@@ -118,6 +118,12 @@ body > footer p {
   margin: 5px;
 }
 
+article.site > header h1 {
+  border-bottom: #DDD 1px solid;
+  font: 2em Helvetica, Arial, sans-serif;
+  margin: 1em 0 0.3em 0;
+}
+
 tt, code, kbd, samp, code * {
   font-family: monospace;
 }

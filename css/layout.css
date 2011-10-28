@@ -90,6 +90,7 @@ tt, code, kbd, samp, code * {
 }
 .highlight pre {
   margin: 0;
+  white-space: pre-wrap !Important;
 }
 .markdown pre {
   margin-bottom: 0 !important;

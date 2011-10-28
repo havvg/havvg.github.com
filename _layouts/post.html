@@ -13,7 +13,7 @@ layout: base
   </section>
 
   <footer>
-  {% if page.tags %}
+  {% if count(page.tags) %}
     <section>
       <h1>Tags</h1>
       <ul class="tags">
@@ -23,7 +23,7 @@ layout: base
       </ul>
     </section>
   {% endif %}
-  {% if site.related_posts %}
+  {% if count(site.related_posts) %}
     <section>
       <h1>Related Posts</h1>
       <ul class="posts">

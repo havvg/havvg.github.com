@@ -1,4 +1,4 @@
----
+--- 
 layout: post
 title: How to combine git and cloudControl using github
 excerpt: |
@@ -16,7 +16,6 @@ excerpt: |
 
 tags: [cloudControl, git, github]
 ---
-
 # Requirements
 
 This is the list of requirements to get this tutorial done.

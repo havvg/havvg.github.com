@@ -2,20 +2,6 @@
 layout: post
 title: How to combine git and cloudControl using github
 excerpt: |
-  # Requirements
-  
-  This is the list of requirements to get this tutorial done.
-  
-  * a working cloudControl account
-  * an active github account
-  * cctrlapp installed
-  * git installed
-  * UNIX based operating system
-  
-  There are plenty of tutorials how to get these things up, so we skip it here completely.
-  
-  # The environment – What do we use?
-  
   ## What is git? – The short version.
   
   Git is a distributed version control system (VCS). What does “distributed” mean in this case? It means, that there is no “server” as in other VCS like subversion. The repository will be transferred as it to any other user who has access to it – including the complete history.
@@ -80,7 +66,8 @@ There are best practices on how to write a commit message in sense of grammar an
 * The first line of the commit message is limited to *49 characters*.
 * The second line is blank.
 * The third line and any following lines are considered detail information on the changes introduced by this commit.
-* In other words, to quote the manual itself.
+
+In other words, to quote the manual itself.
 
 > Though not required, it’s a good idea to begin the commit message with a single
 > short (less than 50 character) line summarizing the change, followed by a blank

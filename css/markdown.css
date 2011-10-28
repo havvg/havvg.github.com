@@ -1,31 +1,42 @@
-.markdown h2 {
+.markdown h1 {
   border-bottom: 3px solid #DDD;
-  font-weight: bold;
-  font-size: 1.8em;
-  margin:1.5em 0 0.8em 0;
-  padding-top:10px;
+  font-weight: 400;
+  font-size: 1.6em;
+  margin: 1em 0 0.5em 0;
+  padding-top: 10px;
 }
 
-.markdown h2 .link {
-  color: #000;
-  text-decoration: none;
+.markdown h2 {
+  border-bottom: 1px solid #DDD;
+  font-weight: 300;
+  font-size: 1.3em;
+  margin: 0.5em 0 0.5em 0;
+  padding-top: 5px;
 }
 
 .markdown h3 {
   color: #000;
-  font-size: 1.6em;
+  font-size: 1.2em;
   margin: 1em 0 0.5em 0;
 }
 
 .markdown h4 {
   color: #000;
-  font-size: 1.2em;
   font-style: italic;
   margin: 1.5em 0 1em 0;
 }
 
 .markdown h5 {
   font-weight: bold;
+}
+
+.markdown h1 .link,
+.markdown h2 .link,
+.markdown h3 .link,
+.markdown h4 .link,
+.markdown h5 .link, {
+  color: #000;
+  text-decoration: none;
 }
 
 .markdown em {
@@ -73,7 +84,7 @@
   background: #F8F8FF;
   border: 1px solid #ddddee;
   color: #222;
-  margin: 1em 40px;
+  margin: 0 0 0.5em 0;
   padding: 10px;
   padding-bottom: 0px;
 }

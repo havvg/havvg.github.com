@@ -9,12 +9,19 @@ body {
   padding: 0;
   width: 85%;
 }
+p {
+  margin-bottom: 0.8em;
+}
+li {
+  padding-left: 1em;
+}
 /* HTML5 backwards compatibility */
 header, section, footer, aside, nav, article {  
   display: block;
 }
 body > header {
   background: #333;
+  margin-bottom: 1em;
   padding: 0 1em;
 }
 body > header h1 {
@@ -40,7 +47,7 @@ body > header nav a {
   background-color: #526A74;
   color: #FFF;
   display: inline-block;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.1em;
   margin-right: 0.4em;
   padding: 2px 10px;
   text-decoration: none;
@@ -50,16 +57,14 @@ body > header nav a:hover {
   background-color: #FFF;
   color: #444;
 }
-body > section {
-  float: left;
-  margin: 0 0 10px 0;
-  padding: 5px 15px;
-  width: 80%;
-}
+body > section,
 body > aside {
   float: left;
   margin: 0 0 10px 0;
-  padding: 0 15px;
+  padding: 5px 15px;
+  width: 75%;
+}
+body > aside {
   width: auto;
 }
 body > footer {
@@ -80,6 +85,7 @@ tt, code, kbd, samp, code * {
 .highlight {
   background-color: #222;
   border-radius: 10px;
+  margin-bottom: 0.8em;
   padding: 5px;
 }
 .highlight pre {

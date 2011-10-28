@@ -1,7 +1,27 @@
 article {
   font: Verdana, Helvetica, Arial, sans-serif;
 }
-.post-title {
+article * {
+  font-size: 95%;
+}
+article pre {
+  font-size: 120%;
+}
+article.preview {
+  margin-bottom: 1.5em;
+}
+article.preview > header {
+  font: 1.3em Helvetica, Arial, sans-serif;;
+  margin-bottom: 0.5em;
+}
+article.preview > header time {
+  margin-right: 0.5em;
+}
+article section.excerpt {
+  font-size: 80%;
+  padding-left: 5em;
+}
+.post > header h1 {
   font: 2em Helvetica, Arial, sans-serif;
   margin: 1em 0 0.3em 0;
 }

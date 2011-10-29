@@ -145,7 +145,7 @@ tt, code, kbd, samp, code * {
   margin: 0;
   white-space: pre-wrap !Important;
 }
-.markdown pre {
+.content pre {
   margin-bottom: 0 !important;
 }
 

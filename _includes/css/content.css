@@ -1,4 +1,4 @@
-.markdown h1 {
+.content h1 {
   border-bottom: 3px solid #DDD;
   font-weight: 400;
   font-size: 1.6em;
@@ -6,7 +6,7 @@
   padding-top: 10px;
 }
 
-.markdown h2 {
+.content h2 {
   border-bottom: 1px solid #DDD;
   font-weight: 300;
   font-size: 1.3em;
@@ -14,63 +14,63 @@
   padding-top: 5px;
 }
 
-.markdown h3 {
+.content h3 {
   color: #000;
   font-size: 1.2em;
   margin: 1em 0 0.5em 0;
 }
 
-.markdown h4 {
+.content h4 {
   color: #000;
   font-style: italic;
   margin: 1.5em 0 1em 0;
 }
 
-.markdown h5 {
+.content h5 {
   font-weight: bold;
 }
 
-.markdown h1 .link,
-.markdown h2 .link,
-.markdown h3 .link,
-.markdown h4 .link,
-.markdown h5 .link, {
+.content h1 .link,
+.content h2 .link,
+.content h3 .link,
+.content h4 .link,
+.content h5 .link, {
   color: #000;
   text-decoration: none;
 }
 
-.markdown em {
+.content em {
   font-style: italic;
 }
 
-.markdown strong {
+.content strong {
   font-weight: bold;
 }
 
-.markdown ul {
+.content ul {
   margin-bottom: 1em;
 }
 
-.markdown ul li {
+.content ul li {
   list-style: disc inside;
   margin-bottom: 10px;
 }
 
-.markdown ul li li {
+.content ul li li {
   list-style: circle inside;
   margin-left: 1em;
 }
 
-.markdown ol li {
+.content ol li {
   list-style: decimal inside;
   margin-bottom: 1em;
 }
 
-.markdown li p {
+.content li p {
     display: inline;
 }
 
-.markdown pre {
+.content pre {
   background: #222;
   color: #FFF;
   font-family: "Bitstream Vera Sans Mono", monospace;
@@ -80,7 +80,7 @@
   padding: 5px;
 }
 
-.markdown blockquote {
+.content blockquote {
   background: #F8F8FF;
   border: 1px solid #ddddee;
   color: #222;
@@ -89,7 +89,7 @@
   padding-bottom: 0px;
 }
 
-.markdown blockquote strong {
+.content blockquote strong {
   background: #ddddee url(../images/info.png) top left no-repeat;
   background-position: 5px 2px;
   display: block;
@@ -98,35 +98,35 @@
   padding: 10px 0 10px 50px;
 }
 
-.markdown table {
+.content table {
   font-size: 1em;
   margin-bottom: 20px;
   width: 100%;
 }
 
-.markdown tbody tr td {
+.content tbody tr td {
   border-bottom: 1px solid #ccc;
   padding: 4px 10px 4px 5px;
 }
 
-.markdown thead tr th {
+.content thead tr th {
   background: #eee;
   padding: 1em;
 }
 
-.markdown img {
+.content img {
   display: block;
   margin:0.5em auto;
   max-width:100%;
   text-align: center;
 }
 
-.markdown img.inline {
+.content img.inline {
   border: none;
   margin: 0 0.5em;
   vertical-align: middle;
 }
 
-.markdown a {
+.content a {
     text-decoration: underline;
 }

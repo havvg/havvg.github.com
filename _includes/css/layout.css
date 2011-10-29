@@ -71,11 +71,13 @@ body > header nav a {
   margin-right: 0.4em;
   padding: 2px 10px;
   text-decoration: none;
+  text-shadow: 1px 1px 2px #000;
 }
 body > header nav a.active,
 body > header nav a:hover {
   background-color: #FFF;
-  color: #444;
+  color: #EEE;
+  text-shadow: 1px 1px 2px #000;
 }
 body > section {
   margin: 0 0 0.3em 0;

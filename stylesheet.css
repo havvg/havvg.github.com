@@ -5,5 +5,4 @@ layout: nil
 {% include css/layout.css %}
 {% include css/markdown.css %}
 {% include css/post.css %}
-{% include css/sidebar.css %}
 {% include css/syntax.css %}

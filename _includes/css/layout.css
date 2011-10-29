@@ -4,22 +4,20 @@
 }
 body {
   font-family: Verdana, Helvetica, Arial, sans-serif;
-  height: 100%;
-  margin: 0 auto;
   padding: 0 0 2em 0;
-  width: 100%;
 }
 address {
-    font-style: normal;
-    padding: 0px 0px 0px 10px;
-    margin: 0px 0px 10px 0px;
-    width: 250px;
+  display: inline-block;
+  font-style: normal;
+  padding: 0px 0px 0px 10px;
+  margin: 0px 0px 10px 0px;
+  width: 250px;
 }
 address > span,
 address a,
 address span.street-address,
 address span.country-name {
-    display: block;
+  display: block;
 }
 a {
   color: #04C;
@@ -79,14 +77,9 @@ body > header nav a:hover {
   background-color: #FFF;
   color: #444;
 }
-body > section,
-body > aside {
-  float: left;
-  margin: 0 0 10px 0;
-  padding: 5px 15px;
-  width: 70%;
-}
-body > aside {
+body > section {
+  margin: 0 0 0.3em 0;
+  padding: 0.2em 0.5em;
   width: auto;
 }
 body > footer {
@@ -140,4 +133,16 @@ tt, code, kbd, samp, code * {
 }
 .markdown pre {
   margin-bottom: 0 !important;
+}
+
+#profile {
+  float: left;
+  margin: 0em 2em 1em 2em;
+  text-align: center;
+}
+#profile img {
+  background: transparent url(/images/profile_photo_frame.jpg) no-repeat top left;
+  border: none;
+  margin: 0 auto;
+  padding: 10px;
 }

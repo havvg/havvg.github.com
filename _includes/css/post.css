@@ -1,5 +1,5 @@
 article {
-  font: Verdana, Helvetica, Arial, sans-serif;
+  font-family: Verdana, Helvetica, Arial, sans-serif;
 }
 article * {
   font-size: 95%;

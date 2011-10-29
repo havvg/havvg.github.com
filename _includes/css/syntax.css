@@ -86,3 +86,9 @@ code.yaml .p-Indicator {color: #FF8400;}
 code.yaml .c1 {color: #ccc; font-style: italic;}
 code.yaml .s {color: #0086d2;}
 code.yaml .nv {color: #fff;}
+
+code.diff { color: #FEFEFE; }
+code.diff .gh { color: #FEFE00; }
+code.diff .gu { color: #0086f7; }
+code.diff .gi { color: #00FE00; }
+code.diff .gd { color: #FE0000; }

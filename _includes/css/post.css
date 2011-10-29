@@ -65,6 +65,7 @@ article section.excerpt {
 }
 section.comments {
   border-top: #DDD 1px solid;
+  clear: both;
   margin: 2em 0;
 }
 section.share {

@@ -8,10 +8,16 @@ layout: base
     <p>published on <time>{{ page.date | date: "%d %B %Y" }}</time></p>
   </header>
 
+  <section class="flattr">
+    <a class="FlattrButton" style="display:none;" href="http://toni.uebernickel.info"></a>
+    <noscript><a href="http://flattr.com/thing/424447/havvgs-playground" target="_blank">
+    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+  </section>
+
   <section class="markdown">
     {{ content }}
   </section>
-  
+
   <section class="comments">
     <div id="disqus_thread"></div>
     <script type="text/javascript">

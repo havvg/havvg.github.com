@@ -13,8 +13,6 @@ excerpt: |
   ## What is cloudControl? – A PHP PaaS!
   
   Yes, that’s it: a great PHP platform as a service (PaaS) on top of Amazon Web Services. You will have your php application deployed on multiple machines with a single command. There are plenty of add-ons available such as worker processes, MySQL database, MongoDB and memcached to name a few.
-
-tags: [cloudControl, git, github]
 ---
 # Requirements
 

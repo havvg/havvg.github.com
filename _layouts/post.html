@@ -7,6 +7,10 @@ layout: base
     <p>published on <time>{{ page.date | date: "%d %B %Y" }}</time></p>
   </header>
 
+  <section class="content">
+    {{ content }}
+  </section>
+
   <section class="share">
     <div>
       <a class="FlattrButton" style="display:none;" href="http://toni.uebernickel.info"></a>
@@ -14,11 +18,25 @@ layout: base
       <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
     </div>
 
-    <div class="g-plusone" data-href="{{ site.baseurl }}{{ page.url }}"></div>
-  </section>
+    <div>
+      <div class="g-plusone" data-size="tall" data-href="{{ site.baseurl }}{{ page.url }}"></div>
+    </div>
 
-  <section class="content">
-    {{ content }}
+    <div>
+      <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.baseurl }}{{ page.url }}" data-text="{{ page.title }}" data-count="vertical" data-via="havvg">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+    </div>
+
+    <div>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=204966900790";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <div class="fb-like" data-href="{{ site.baseurl }}{{ page.url }}" data-send="false" data-layout="box_count" data-width="55" data-show-faces="false" data-font="verdana"></div>
+    </div>
   </section>
 
   <section class="comments">

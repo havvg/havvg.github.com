@@ -68,10 +68,7 @@ section.comments {
   clear: both;
   margin: 2em 0;
 }
-section.share {
-  float: right;
-  margin: 0 1em 1em 1em;
-}
-section.share div {
-  margin: 0.5em 0;
+section.share > div {
+  float: left;
+  margin: 1em 1.5em 1em 0.5em;
 }

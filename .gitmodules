@@ -1,3 +1,0 @@
-[submodule "css/pygments"]
-	path = css/pygments
-	url = git://github.com/icco/pygments-css.git

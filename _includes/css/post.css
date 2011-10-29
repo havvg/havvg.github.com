@@ -63,6 +63,7 @@ article section.excerpt {
   font-weight: bold;
   text-decoration: none;
 }
-.comments {
-  margin-bottom: 1em;
+section.comments {
+  border-top: #DDD 1px solid;
+  margin: 2em 0;
 }

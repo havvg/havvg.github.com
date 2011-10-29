@@ -6,14 +6,13 @@ aside > section h1 {
   text-align: center;
   text-decoration: underline;
 }
+#profile {
+  margin: 1em 0.5em;
+  text-align: center;
+}
 #profile img {
   background: transparent url(/images/profile_photo_frame.jpg) no-repeat top left;
   border: none;
+  margin: 0 auto;
   padding: 10px;
-}
-#socialnetworks {
-}
-#socialnetworks li {
-  display: inline-block;
-  margin: 0.1em;
 }

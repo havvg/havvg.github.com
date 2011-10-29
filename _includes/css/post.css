@@ -55,7 +55,7 @@ article section.excerpt {
   border: #E5E5E5 1px solid;
   border-radius: 3px;
   display: inline-block;
-  margin: 0 0.2em 0.2em 0;
+  margin: 0.1em;
   padding: 1px 5px;
 }
 .post > footer ul a {

@@ -67,7 +67,10 @@ section.comments {
   border-top: #DDD 1px solid;
   margin: 2em 0;
 }
-section.flattr {
+section.share {
   float: right;
   margin: 0 1em 1em 1em;
+}
+section.share div {
+  margin: 0.5em 0;
 }

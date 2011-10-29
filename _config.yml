@@ -8,7 +8,7 @@ navigation:
     url: /archive.html
   - text: Imprint
     url: /imprint.html
-baseurl: http://havvg.github.com
+baseurl: http://toni.uebernickel.info
 author:
   name: Toni Uebernickel
   email: tuebernickel@gmail.com
@@ -30,3 +30,5 @@ disqus:
   config:
     - label: disqus_shortname
       value: 'havvgsplayground'
+googleanalytics:
+  account: UA-738346-7

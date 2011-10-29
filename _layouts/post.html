@@ -1,17 +1,20 @@
 ---
 layout: base
 ---
-
 <article class="post">
   <header>
     <h1>{{ page.title }}</h1>
     <p>published on <time>{{ page.date | date: "%d %B %Y" }}</time></p>
   </header>
 
-  <section class="flattr">
-    <a class="FlattrButton" style="display:none;" href="http://toni.uebernickel.info"></a>
-    <noscript><a href="http://flattr.com/thing/424447/havvgs-playground" target="_blank">
-    <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+  <section class="share">
+    <div>
+      <a class="FlattrButton" style="display:none;" href="http://toni.uebernickel.info"></a>
+      <noscript><a href="http://flattr.com/thing/424447/havvgs-playground" target="_blank">
+      <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
+    </div>
+
+    <div class="g-plusone" data-href="{{ site.baseurl }}{{ page.url }}"></div>
   </section>
 
   <section class="markdown">
@@ -20,12 +23,12 @@ layout: base
 
   <section class="comments">
     <div id="disqus_thread"></div>
-    <script type="text/javascript">
+    <script>
         {% for config in site.disqus.config %}
         var {{ config.label }} = '{{ config.value }}';
         {% endfor %}
 
-        var disqus_identifier = '{{ site.baseurl }}{{ page.url }}';
+        var disqus_identifier = '{{ page.id }}';
         var disqus_url = '{{ site.baseurl }}{{ page.url }}';
 
         (function() {
@@ -53,7 +56,7 @@ layout: base
     <section>
       <h1>Related Posts</h1>
       <ul class="posts">
-        {% for post in site.related_posts limit:5 %}
+        {% for post in site.related_posts limit:3 %}
         <li><a href="{{ post.url }}">{{ post.title }}</a></li>
         {% endfor %}
       </ul>

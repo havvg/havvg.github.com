@@ -25,6 +25,18 @@ a {
 a:hover {
   color: #37F;
 }
+dl {
+  margin-bottom: 1em;
+  padding-left: 1em;
+}
+dt {
+  float: left;
+  font-weight: bold;
+}
+dt:after {
+  content: ": ";
+  margin-right: 0.5em;
+}
 figcaption {
   font-size: 0.8em;
   text-align: center;

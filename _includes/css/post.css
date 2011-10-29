@@ -19,7 +19,7 @@ article.preview > header time {
 }
 article section.excerpt {
   font-size: 80%;
-  padding-left: 5em;
+  padding-left: 3em;
 }
 .post > header h1 {
   border-bottom: #DDD 1px solid;
@@ -55,7 +55,7 @@ article section.excerpt {
   border: #E5E5E5 1px solid;
   border-radius: 3px;
   display: inline-block;
-  margin: 0 0.2em;
+  margin: 0 0.2em 0.2em 0;
   padding: 1px 5px;
 }
 .post > footer ul a {

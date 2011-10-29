@@ -113,7 +113,7 @@ body > footer ul li {
   color: #888;
   display: inline-block;
   font-size: 0.8em;
-  margin-right: 0.4em;
+  margin: 0 0.4em 0.4em 0;
   padding: 2px 10px;
 }
 body > footer a {

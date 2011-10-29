@@ -63,3 +63,6 @@ article section.excerpt {
   font-weight: bold;
   text-decoration: none;
 }
+.comments {
+  margin-bottom: 1em;
+}

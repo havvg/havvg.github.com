@@ -26,3 +26,7 @@ author:
       url: https://www.youtube.com/user/havvg
 title: havvg's playground
 strapline: Developing Software is Fun!
+disqus:
+  config:
+    - label: disqus_shortname
+      value: 'havvgsplayground'

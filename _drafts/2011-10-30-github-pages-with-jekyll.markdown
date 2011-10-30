@@ -24,9 +24,13 @@ There is no way to have drafts in [Jekyll] by now. I can't use a custom fork, as
 
 I have added the line `_posts/*.draft.*` to the project's `.gitignore`. Yes, there is `published: false` configurable on each post. But in a hurry, would you change this flag back or accidentally commit the new post `published: true` because you were reviewing your upcoming post?
 
-On my local machine I have `jekyll --no-lsi --auto` running. This will automatically regenerate content on file changes. By having the gitignore in place, I can't commit a new post's file, that follows the naming convention of `year-month-day-your-title.draft.extension`. When I'm done, I move the file, commit it and the post is getting published.
+On my local machine I have `jekyll --no-lsi --auto` running. This will automatically regenerate content on file changes. By having the gitignore in place, I can't commit a new post's file, that follows the naming convention of `year-month-day-your-title.draft.extension`.
 
-If you want to have your drafts versioned, add a folder like `_drafts` and create a symlink to it in `_posts`, so you will be able to see it locally, but it's not published on production.
+### Versioning drafts
+
+If you want to have your drafts versioned, add a folder like `_drafts` add your draft there and create a file link to it in `_posts`, so you will be able to see it locally, but it's not published on production.
+
+Assume, you have this file `_drafts/2011-10-30-github-pages-with-jekyll.markdown`. Issuing this command line will add a post that will be published locally: `ln _drafts/2011-10-30-github-pages-with-jekyll.markdown _posts/2011-10-30-github-pages-with-jekyll.draft.markdown`.
 
 ## Combining multiple CSS files
 

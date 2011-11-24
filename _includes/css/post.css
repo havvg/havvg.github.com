@@ -7,6 +7,9 @@ article * {
 article pre {
   font-size: 120%;
 }
+article pre span {
+  font-size: 100%;
+}
 article.preview {
   margin-bottom: 1.5em;
 }

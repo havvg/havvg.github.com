@@ -6,3 +6,4 @@ layout: nil
 {% include css/content.css %}
 {% include css/post.css %}
 {% include css/syntax.css %}
+{% include css/responsive.css %}

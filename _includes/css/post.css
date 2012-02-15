@@ -4,6 +4,9 @@ article {
 article * {
   font-size: 95%;
 }
+article * * * {
+  font-size: 100%;
+}
 article pre,
 article pre span {
   font-size: 100%;

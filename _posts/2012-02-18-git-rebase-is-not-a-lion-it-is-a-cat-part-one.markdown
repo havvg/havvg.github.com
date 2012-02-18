@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "git rebase is not a lion, it's a cat"
+title: "git rebase is not a lion, it's a cat - Part One"
 excerpt: |
   There are many users out there being scared to use git rebase.
   To wrap things up, git rebase is not a lion that will hunt you down.

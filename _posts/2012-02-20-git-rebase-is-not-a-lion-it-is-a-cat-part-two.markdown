@@ -41,6 +41,8 @@ This happens because the most recent commit of it does not have the remotes `HEA
 What could we do about this? Correct, we could `git pull` to retrieve the current tree from the origin. What do you think will happen here?
 A new merge commit will be added. The two commits to be merged are the `HEAD` commits of both cloned repositories - `c7878a6` and `341c62e`, respectively.
 
+![Example pull](/images/2012/02/git-rebase-6.2.png "Example pull")
+
 Now that we have done this, it's not getting better. The keyword is `rebase`, who would have guessed?
 Since the first repository didn't push its changes by now. We are still good to rebase and push afterwards.
 We only need to know the most recent commit of the remote repository. We have pulled its state, so we already know it, it's `c7878a6`.

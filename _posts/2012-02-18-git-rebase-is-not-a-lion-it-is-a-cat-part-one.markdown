@@ -38,7 +38,7 @@ This is the first thing to be fully aware of: **The history will be re-written.*
 Which is no problem in itself. It will only hurt, when you try to push this new history into another repository which `HEAD` is pointing to a commit, the current tree does not contain anymore.
 
 If you now check the history with `git log`, you will miss the merge commit and all commits have a different hash, all except the first one, you rebased to.
-This is where the part of re-writing history is important to know. You can now - *without any problem* - push to any remote branch that's `HEAD` is that exact commit or any past commit in its tree.
+This is where the part of re-writing history is important to know. You can now - *without any problem* - push to any remote branch which `HEAD` is that exact commit or any past commit in its tree.
 You **cannot** push to a remote branch which `HEAD` was already on a commit that has been re-written by the `git rebase`!
 
 The commit you are missing in that log is not gone. It is there, if you try `git show <commit>` it will show you its content. You can also check it out `git checkout <commit>`.

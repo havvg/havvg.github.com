@@ -96,8 +96,8 @@ Feature: User Registration
           And I press "Register"
          Then the response status code should be 302
           And email with subject "Welcome havvg!" should have been sent to "example@example.com"
-         When I am redirected to "/register/check-email"
-         Then the response status code should be 200
+         Then I should be redirected to "/register/check-email"
+          And the response status code should be 200
           And the response should contain "The user has been created successfully"
 {% endhighlight %}
 

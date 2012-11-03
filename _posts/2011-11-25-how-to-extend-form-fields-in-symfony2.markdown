@@ -116,5 +116,5 @@ Using `Twitter Bootstrap` this is how it would look like.
 
 ![A form with help messages](/images/2011/11/Symfony2-example-form-with-help-messages.png "A form with help messages")
 
-[the form documentation]: http://symfony.com/doc/current/cookbook/form/form_customization.html#adding-help-messages
+[the form documentation]: http://symfony.com/doc/2.0/cookbook/form/form_customization.html#adding-help-messages
 [form component of Symfony2]: https://github.com/symfony/Form

@@ -7,7 +7,7 @@ excerpt: |
 ---
 
 The [previous post] on `FormTypeExtensionInterface` is outdated for the current Symfony version 2.1.
-As requested multiple times, I want to share an updated version of how to create such an extension.
+As requested multiple times, I want to share an updated version on how to create such an extension.
 
 The only main differences between the previous posts state and the current version are:
 
@@ -22,9 +22,9 @@ Now let's get to the changes from Symfony 2.0 to 2.1 on this matter.
 ## Interfaces instead of implementations
 
 The first change is the type hinting on `Interfaces` instead of actual classes (implementations).
-PHP will throw you the error, as the methods signature do not match anymore, when updating.
+PHP will throw you the errors, as the methods signature do not match anymore, when updating.
 
-This should be very trivial to fix, you only need to add the `use` statements for the missing interfaces (replacing the `FormBuilder` for example with `FormBuilderInterface`) until PHP is fine with loading the class file.
+This should be very trivial to fix, you only need to add the `use` statements for the missing interfaces (replacing the `FormBuilder` for example with `FormBuilderInterface`) and the type-hints until PHP is fine with loading the class file.
 
 ## The OptionsResolverInterface
 
@@ -33,7 +33,7 @@ This resolver deprecates the `getDefaultOptions` method of the `AbstractTypeExte
 
 The `FormTypeExtensionInterface` does not declare this method anymore.
 If you used the interface before instead of the abstract implementation of it, you will at least be notified by PHP on the missing implementation of the `setDefaultOptions` method.
-A very basic implementation of this methods looks like this, and resembles the previous `getDefaultOptions`.
+A very basic implementation of this method looks like this, and resembles the previous `getDefaultOptions`.
 
 {% highlight php %}
 <?php
@@ -74,7 +74,7 @@ services:
 ## The HelpMessageTypeExtension
 
 This is the updated version of the `HelpMessageTypeExtension`.
-It resembled the previous behavior as much as possible, although it's not required to do it that way in Symfony 2.1.
+It resembles the previous behavior as much as possible, although it's not required to do it that way in Symfony 2.1.
 
 {% highlight php %}
 <?php
@@ -121,7 +121,7 @@ Those attributes define the type of content the browser should provide when auto
 See [autocomplete at whatwg] for more details on which types are available.
 
 This version removes the setting of an attribute on the form.
-This is possible, because the `buildView` now retrieves the provided `$options` directly, so no need anymore store the information twice.
+This is possible, because the `buildView` now retrieves the provided `$options` directly, so no need to store the information twice, anymore.
 
 {% highlight php %}
 <?php
@@ -141,7 +141,7 @@ class AutocompleteExtension extends AbstractTypeExtension
             $options['autocomplete'] = 'off';
         }
 
-        // It doesn't hurt even it will be left empty.
+        // It doesn't hurt even if it will be left empty.
         if (empty($view->vars['attr'])) {
             $view->vars['attr'] = array();
         }

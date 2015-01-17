@@ -1,85 +1,57 @@
----
-layout: base
----
-<article class="post">
-  <header>
-    <h1>{{ page.title }}</h1>
-    <p>published on <time>{{ page.date | date: "%d %B %Y" }}</time></p>
-  </header>
+<!DOCTYPE html>
+<html>
+    {% include layout/head.html %}
 
-  <section class="content">
-    {{ content }}
-  </section>
+    <body itemscope itemtype="http://schema.org/BlogPosting">
+        {% include layout/header.html %}
 
-  <section class="share">
-    <div>
-      <a class="FlattrButton" style="display:none;" href="http://toni.uebernickel.info"></a>
-      <noscript><a href="http://flattr.com/thing/424447/havvgs-playground" target="_blank">
-      <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a></noscript>
-    </div>
+        <main class="content" role="main">
+            <article class="post">
+                {% include post/header.html %}
 
-    <div>
-      <div class="g-plusone" data-size="tall" data-href="{{ site.baseurl }}{{ page.url }}"></div>
-    </div>
+                <section class="post-content">
+                    <div class="post-reading"><span class="post-reading-time"></span> read</div>
+                    <a name="topofpage"></a>
+                    <div itemprop="articleBody">{{ content }}</div>
+                </section>
 
-    <div>
-      <a href="https://twitter.com/share" class="twitter-share-button" data-url="{{ site.baseurl }}{{ page.url }}" data-text="{{ page.title }}" data-count="vertical" data-via="havvg">Tweet</a><script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
-    </div>
+                <footer class="post-footer">
+                    {% include post/comments.html %}
+                </footer>
 
-    <div>
-      <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.async = true;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=204966900790";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-      <div class="fb-like" data-href="{{ site.baseurl }}{{ page.url }}" data-send="false" data-layout="box_count" data-width="55" data-show-faces="false" data-font="verdana"></div>
-    </div>
-  </section>
+                <div class="bottom-teaser cf">
+                    <div class="isLeft">
+                        <h5 class="index-headline featured"><span>Written by</span></h5>
+                        <section class="author">
+                            <div class="author-image" style="background-image: url({{ site.author.image }})">Blog Logo</div>
+                            <h4>{{ site.author.name }}</h4>
+                            <p class="bio">{{ site.author.bio }}</p>
+                            <hr>
+                            <p class="published">Published <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time></p>
+                        </section>
+                    </div>
+                    <div class="isRight">
+                        <h5 class="index-headline featured"><span>Support &amp; Share</span></h5>
+                        <footer class="site-footer">
+                            <a class="subscribe" href="{{ "/atom.xml" | prepend: site.baseurl }}"><span class="tooltip"><i class="fa fa-rss"></i> You should subscribe to my feed!</span></a>
+                            <div class="inner">
+                                <section class="copyright">All content copyright <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
+                            </div>
+                            <br>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="havvg">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </footer>
+                    </div>
+                </div>
+            </article>
+        </main>
 
-  <section class="comments">
-    <div id="disqus_thread"></div>
-    <script>
-        {% for config in site.disqus.config %}
-        var {{ config.label }} = '{{ config.value }}';
-        {% endfor %}
+        {% include meta/page.html %}
+        {% include meta/site_author.html %}
 
-        var disqus_identifier = '{{ page.id }}';
-        var disqus_url = '{{ site.baseurl }}{{ page.url }}';
+        {% include site/bottom_closer.html %}
+        {% include site/footer.html %}
 
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-  </section>
-
-  <footer>
-  {% if page.tags != empty %}
-    <section>
-      <h1>Tags</h1>
-      <ul class="tags">
-      {% for tag in page.tags %}
-        <li><a href="/">{{ tag }}</a></li>
-      {% endfor %}
-      </ul>
-    </section>
-  {% endif %}
-  {% if site.related_posts != empty %}
-    <section>
-      <h1>Related Posts</h1>
-      <ul class="posts">
-        {% for post in site.related_posts limit:3 %}
-        <li><a href="{{ post.url }}">{{ post.title }}</a></li>
-        {% endfor %}
-      </ul>
-    </section>
-  {% endif %}
-  </footer>
-</article>
+        {% include layout/javascripts.html %}
+    </body>
+</html>

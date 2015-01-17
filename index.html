@@ -1,0 +1,32 @@
+---
+layout: base
+---
+{% include site/teaser_image.html %}
+{% include blog/header.html %}
+
+<main class="content" role="main">
+    {% if site.tags.featured %}
+        <h5 class="index-headline featured"><span>Featured</span></h5>
+
+        <div class="container featured">
+          {% for post in site.tags.featured %}
+              {% include post/preview.html %}
+          {% endfor %}
+        </div>
+
+        <h5 class="index-headline normal"><span>Regular</span></h5>
+    {% endif %}
+
+    <div class="cf">
+      {% for post in site.posts limit:5 %}
+		  {% include post/preview.html %}
+      {% endfor %}
+    </div>
+</main>
+    
+<div class="bottom-closer">
+    <div class="background-closer-image" {%if site.cover.bottom %} style="background-image: url({{ site.cover.bottom }})"{% endif %}>Image</div>
+    <div class="inner">
+        <a class="btn" href="{{ "/archive.html" | prepend: site.baseurl }}">Find more posts in the archive.</span></a>
+    </div>
+</div>

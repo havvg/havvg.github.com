@@ -1,4 +1,24 @@
----
-layout: base
----
-{{ content }}
+<!DOCTYPE html>
+<html>
+    {% include layout/head.html %}
+
+    <body>
+        {% include layout/header.html %}
+
+        <main class="content" role="main">
+            <article class="post">
+                {% include post/header.html %}
+
+                <section class="post-content">
+                    <a name="topofpage"></a>
+                    {{ content }}
+                </section>
+            </article>
+        </main>
+
+        {% include site/bottom_closer.html %}
+        {% include site/footer.html %}
+
+        {% include layout/javascripts.html %}
+    </body>
+</html>

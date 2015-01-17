@@ -1,0 +1,16 @@
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+    <div class="article-item">
+        <header class="post-header">
+            <h2 class="post-title" itemprop="headline"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h2>
+        </header>
+        <section class="post-excerpt" itemprop="description">
+            <p>{{ post.content | strip_html | truncatewords: 50 }}</p>
+        </section>
+        <div class="post-meta">
+            <time datetime="{{ post.date | date_to_long_string }}" itemprop="datePublished">{{ post.date | date_to_long_string }}</time>
+            <!--<span class="post-tags-set">on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}}</span>-->
+        </div>
+    </div>
+
+    {% include meta/site_author.html %}
+</article>

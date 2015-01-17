@@ -1,34 +1,69 @@
+markdown: redcarpet
+highlighter: pygments
+
 safe: true
-lsi: true
-pygments: true
-navigation:
-  - text: Home
-    url: /index.html
-  - text: Archive
-    url: /archive.html
-  - text: Imprint
-    url: /imprint.html
-baseurl: http://toni.uebernickel.info
+lsi: false
+
+url: "http://toni.uebernickel.info"
+baseurl: ""
+
+title: havvg's playground
+description: Developing Software is Fun!
+
+logo: /images/logo.jpg
+cover:
+  top: /images/cover.jpg
+  bottom: /images/cover.jpg
+
 author:
   name: Toni Uebernickel
   email: tuebernickel@gmail.com
-  nick: havvg
-  profiles:
-    - label: XING
+  image: /images/profile_photo.jpg
+  bio: Software Engineer and Architect, Symfony and Propel evangelist with some Ducati bikes.
+  social:
+    - icon: github
+      url: https://github.com/havvg
+      desc: Fork me on github
+
+    - icon: twitter
+      url: https://twitter.com/havvg
+      desc: Follow me on twitter
+
+    - icon: linkedin
+      url: https://www.linkedin.com/in/havvg
+      desc: Connect on LinkedIn
+
+    - icon: xing
       url: https://www.xing.com/profile/Toni_Uebernickel
-    - label: facebook
-      url: https://www.facebook.com/toni.uebernickel
-    - label: flickr
+      desc: Connect on XING
+
+    - icon: flickr
       url: http://www.flickr.com/photos/toni-uebernickel/
-    - label: twitter
-      url: https://twitter.com/havvg/
-    - label: YouTube
-      url: https://www.youtube.com/user/havvg
-title: havvg's playground
-strapline: Developing Software is Fun!
+      desc: My flickr stream
+
+    - icon:	youtube
+      url:	https://www.youtube.com/user/havvg
+      desc:	My YouTube channel
+
+    - icon:	facebook
+      url:	https://www.facebook.com/toni.uebernickel
+      desc:	My Facebook profile
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
 disqus:
   config:
     - label: disqus_shortname
       value: 'havvgsplayground'
+
 googleanalytics:
   account: UA-738346-7
+
+gosquared:
+  account: GSN-841923-G

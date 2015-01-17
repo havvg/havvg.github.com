@@ -1,10 +1,25 @@
 ---
-layout: site
+layout: base
+title: Archive
 sitemap:
   priority: 0.7
   changefreq: weekly
   lastmod: 2011-09-29T18:56:19+02:00
 ---
-{% for post in site.posts %}
-  {% include post_preview.html %}
-{% endfor %}
+{% include site/teaser_image.html %}
+{% include blog/header.html %}
+
+<main class="content" role="main">
+    <div class="cf">
+      {% for post in site.posts %}
+		  {% include post/preview.html %}
+      {% endfor %}
+    </div>
+</main>
+
+<div class="bottom-closer">
+    <div class="background-closer-image" {% if site.cover.bottom %} style="background-image: url({{ site.cover.bottom }})"{% endif %}>Image</div>
+    <div class="inner">
+        <a href="/" class="btn">Back to Overview</a>
+    </div>
+</div>

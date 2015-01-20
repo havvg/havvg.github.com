@@ -1,8 +1,14 @@
+@mixin respond-from($breakpoint)
+    @media only screen and (min-width: $breakpoint + px)
+        @content
+
 .noarticleimage
     margin-bottom: 70px
 
 .content
-    max-width: 960px
+    @include respond-from(800)
+        max-width: 800px
+        padding: 0 $rs*2
 
 .logo-readium 
     .logo

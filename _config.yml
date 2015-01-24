@@ -56,6 +56,14 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+      comments: true
+  -
+    scope:
+      path: ""
+      type: "drafts"
+    values:
+      layout: "post"
+      comments: false
 
 disqus:
   config:

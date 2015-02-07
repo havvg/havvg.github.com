@@ -7,7 +7,7 @@
         {% endfor %}
 
         var disqus_identifier = '{{ page.id }}';
-        var disqus_url = '{{ site.baseurl }}{{ page.url }}';
+        var disqus_url = '{{ site.url }}{{ site.baseurl }}{{ page.url }}';
 
         (function() {
             var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

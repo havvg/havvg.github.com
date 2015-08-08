@@ -164,4 +164,4 @@ However you should take care about removing the link itself, if you put it outsi
 
 It's important to use the `live` binding of the `click` event. This is required to have the binding apply on newly created links!
 
-*Update*: An updated version of the Javascript can be found here: https://gist.github.com/havvg/31ab826a5dc68877462c
+*Update*: [An updated version of the Javascript can be found here](https://gist.github.com/havvg/31ab826a5dc68877462c).

@@ -10,7 +10,7 @@
         max-width: 800px
         padding: 0 $rs*2
 
-.logo-readium 
+.logo-readium
     .logo
         left: 2px
         height: 44px
@@ -22,3 +22,24 @@
         .post-meta
             left: 20%
             right: 20%
+
+.post nav.bottom-teaser.pagination
+    font-size: 14px
+    padding: 25px 0 10px 0
+
+    a
+        color: #000
+        text-decoration: none
+        &:hover
+            color: #333
+            text-decoration: underline
+
+    .index-headline
+        padding-bottom: 10px
+
+    @include respond-from(800)
+        .isLeft
+            text-align: left
+
+        .isRight
+            text-align: right

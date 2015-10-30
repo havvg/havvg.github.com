@@ -14,6 +14,21 @@
                     <div itemprop="articleBody">{{ content }}</div>
                 </section>
 
+                <nav class="bottom-teaser pagination cf" role="navigation">
+                    {% if page.previous %}
+                        <div class="isLeft">
+                            <h5 class="index-headline"><span>Previous post</span></h5>
+                            <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
+                        </div>
+                    {% endif %}
+                    {% if page.next %}
+                        <div class="isRight">
+                            <h5 class="index-headline"><span>Next post</span></h5>
+                            <a href="{{ page.next.url }}">{{ page.next.title }}</a>
+                        </div>
+                    {% endif %}
+                </nav>
+
                 <footer class="post-footer">
                     {% include post/comments.html %}
                 </footer>

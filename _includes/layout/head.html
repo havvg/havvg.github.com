@@ -27,4 +27,10 @@
     {% if nil == page.id %}
         <link rel="prefetch" href="{{ site.posts.first.url }}" />
     {% endif %}
+    {% if page.previous %}
+        <link rel="prev" href="{{ page.previous.url }}" />
+    {% endif %}
+    {% if page.next %}
+        <link rel="next prefetch" href="{{ page.next.url }}" />
+    {% endif %}
 </head>

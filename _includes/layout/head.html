@@ -23,4 +23,8 @@
     <link rel="stylesheet" type="text/css" href="{{ "/css/font.css"  | prepend: site.baseurl  }}" />
     <link rel="stylesheet" type="text/css" href="{{ "/css/main.css"  | prepend: site.baseurl  }}" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    {% if nil == page.id %}
+        <link rel="prefetch" href="{{ site.posts.first.url }}" />
+    {% endif %}
 </head>

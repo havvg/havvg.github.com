@@ -1,6 +1,15 @@
 ---
 layout: post
 title: "An example of Symfony2 CollectionType form field prototype"
+tags:
+    - symfony
+    - form
+    - form-component
+    - form-extension
+    - collection
+    - javascript
+    - tutorial
+    - how-to
 excerpt: |
   While working an a multi-step form with multiple `CollectionType` in it, I came across the issue requiring a generic solution for handling `allow_add` and `allow_delete` on a collection.
   As there is no entry on the `allow_delete` part in the Symfony2 documentation itself, this solution may not be the best way to do it.
@@ -15,7 +24,7 @@ templates:
             {% set form = widget %}
             {% set name = widget.get('full_name') %}
         {% endif %}
-    
+
         <div data-content="{{ name }}">
             <a class="btn-remove" data-related="{{ name }}">{{ remove_text }}</a>
             {{ form_widget(form) }}
@@ -23,12 +32,12 @@ templates:
     {% endmacro %}
   post_type: |
     <?php
-    
+
     namespace Acme\Bundle\BlogBundle\Form\Type;
-    
+
     use Symfony\Component\Form\FormBuilder;
     use Symfony\Component\Form\AbstractType;
-    
+
     class PostType extends AbstractType
     {
         public function buildForm(FormBuilder $builder, array $options)
@@ -38,10 +47,10 @@ templates:
                 ->add('content', 'textarea')
                 ->add('tags', 'collection', array(
                     'type' => new TagType(),
-                    
+
                     'allow_add' => true,
                     'allow_delete' => true,
-                    
+
                     'prototype' => true,
                     'prototype_name' => 'tag__name__',
                     'options' => array(
@@ -50,7 +59,7 @@ templates:
                 ))
             ;
         }
-        
+
         public function getName()
         {
             return 'post';
@@ -58,19 +67,19 @@ templates:
     }
   tag_type: |
     <?php
-    
+
     namespace Acme\Bundle\BlogBundle\Form\Type;
-    
+
     use Symfony\Component\Form\FormBuilder;
     use Symfony\Component\Form\AbstractType;
-    
+
     class TagType extends AbstractType
     {
         public function buildForm(FormBuilder $builder, array $options)
         {
             $builder->add('name');
         }
-        
+
         public function getName()
         {
             return 'tag';
@@ -83,18 +92,18 @@ templates:
             <legend>Add a new post</legend>
             {{ form_row(form.title) }}
             {{ form_row(form.content) }}
-            
+
             <div id="post_tags" data-prototype="{{ _self.widget_prototype(form.tags, 'Remove tag')|escape }}">
                 {% for widget in form.tags.children %}
                     {{ _self.widget_prototype(widget, 'Remove tag') }}
                 {% endfor %}
             </div>
-            
+
             <a class="btn-add" data-target="post_tags">Add tag</a>
         </fieldset>
-        
+
         {{ form_widget(form._token) }}
-        
+
         <input type="submit" value="Add post" />
     </form>
   javascript: |
@@ -102,15 +111,15 @@ templates:
         var collectionHolder = $('#' + $(this).attr('data-target'));
         var prototype = collectionHolder.attr('data-prototype');
         var form = prototype.replace(/__name__/g, collectionHolder.children().length);
-    
+
         collectionHolder.append(form);
-    
+
         return false;
     });
     $('.btn-remove').live('click', function(event) {
         var name = $(this).attr('data-related');
         $('*[data-content="'+name+'"]').remove();
-    
+
         return false;
     });
 ---

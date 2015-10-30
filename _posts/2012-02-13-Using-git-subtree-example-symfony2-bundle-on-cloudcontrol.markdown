@@ -1,11 +1,16 @@
 ---
 layout: post
 title: "Using git-subtree: Example adding Symfony2 bundle on cloudControl"
+tags:
+    - git
+    - git-subtree
+    - documentation
+    - tutorial
 excerpt: |
   Let's say you got your closed source project built on Symfony2.
   Let's further say you are a proud customer of cloudControl.
   Third assumption: You have not only one project, but two and those are sharing a closed source bundle.
-  
+
   See how to use `git-subtree` to add the shared bundle to both projects and having the bundle in a separate repository.
 ---
 
@@ -64,7 +69,7 @@ This will apply the changes and a merge commit will be created. If you don't wan
 Let's take a look at the history of this subtree merge on `application-a`.
 
 <pre>
-*   66815de - (HEAD, master) Merge branch 'master' of git@git.localdomain:shared-bundle.git into master 
+*   66815de - (HEAD, master) Merge branch 'master' of git@git.localdomain:shared-bundle.git into master
 |\  
 | * 25f6757 - (shared-bundle/master) add empty README
 * |   bcd30d9 - Merge remote-tracking branch 'shared-bundle/master' into master

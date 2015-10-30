@@ -1,6 +1,12 @@
 ---
 layout: post
 title: "Merging a git subtree on failing path guessing"
+tags:
+    - git
+    - git-subtree
+    - git-merge
+    - documentation
+    - tutorial
 excerpt: |
   In the previous post we set up a project using git-subtree.
   Unfortunately there may be situations when the merge of the subtree will not make its way into the correct directory.
@@ -36,7 +42,7 @@ Now that I have added some changes to the bundle, I want them to be merged into 
 
 <pre>
  LandingpageBundle git:master ✔  git ph                         ~/Ormigo/repository/LandingpageBundle
-* 4db8fde - (HEAD, origin/master, master) add controller and routing for landingpages (73 minutes ago) 
+* 4db8fde - (HEAD, origin/master, master) add controller and routing for landingpages (73 minutes ago)
 * dffe3f8 - add FilesystemLoader for Twig (73 minutes ago) &lt;Toni Uebernickel&gt;
 * 91b1877 - add LandingpageInterface (75 minutes ago) &lt;Toni Uebernickel&gt;
 * 6dee0ac - add empty LandingpageBundle (6 days ago) &lt;Toni Uebernickel&gt;

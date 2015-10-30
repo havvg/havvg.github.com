@@ -1,6 +1,13 @@
 ---
 layout: post
 title: "How to extend form fields in Symfony2.1 using extensions"
+tags:
+    - symfony
+    - form
+    - form-component
+    - form-extension
+    - tutorial
+    - how-to
 excerpt: |
   This blogpost explains on the example of adding support for the "autocomplete" attribute to widgets how to use form type extensions.
   It also illustrates changes required when upgrading from Symfony 2.0 to 2.1.

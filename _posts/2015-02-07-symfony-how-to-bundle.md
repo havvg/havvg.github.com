@@ -1,6 +1,11 @@
 ---
 layout: post
 title: "Symfony: How to Bundle"
+tags:
+    - symfony
+    - bundle
+    - tutorial
+    - how-to
 ---
 Creating a bundle for Symfony is one of the most misunderstood topics. This topic is very old, but it got some tension in the recent past. I've been discussing this topic with several people using different channels for more than three years now. There are some blog postings out there based on those discussions.
 
@@ -51,7 +56,7 @@ The kind of bundles you should consume with caution - the bad ones - are those m
 
 This whole topic is about software architecture. I hear people saying "My new project will be built in Symfony." Most projects start with such a sentence. The majority of projects I've seen so far are so called "legacy applications" that have been built for the last five to ten years. The developers back then may not be around anymore. The patterns are bad, the software is fragile and there is more time investment on maintenance than on getting more business value out of it.
 
-So, there is the current team of developers, who are choosing Symfony as their framework of choice and start building the new version, completely free from any technical debt the legacy codebase contains. They are reading the first parts of the documentation and get started. Based on the documentation they will start creating bundles all over the place. Those bundles are bound to the application and they will be circular dependencies on the bundles eliminating the sake of the bundles in the first place completely. 
+So, there is the current team of developers, who are choosing Symfony as their framework of choice and start building the new version, completely free from any technical debt the legacy codebase contains. They are reading the first parts of the documentation and get started. Based on the documentation they will start creating bundles all over the place. Those bundles are bound to the application and they will be circular dependencies on the bundles eliminating the sake of the bundles in the first place completely.
 
 One or two years later, they realize a common pitfall to be part of their software: "I got the model X, which somehow is connected to bundle A, but also bundle B - where should a put it?" If you are asking a similar question in your software project, you have failed in building a maintainable software and will end up with a "legacy codebase" soon - one using Symfony.
 

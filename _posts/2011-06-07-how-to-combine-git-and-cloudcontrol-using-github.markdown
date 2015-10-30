@@ -1,17 +1,23 @@
---- 
+---
 layout: post
 title: How to combine git and cloudControl using github
+tags:
+    - git
+    - github
+    - cloudcontrol
+    - documentation
+    - tutorial
 excerpt: |
   ## What is git? – The short version.
-  
+
   Git is a distributed version control system (VCS). What does “distributed” mean in this case? It means, that there is no “server” as in other VCS like subversion. The repository will be transferred as it to any other user who has access to it – including the complete history.
-  
+
   ## What is github? – A small overview.
-  
+
   Github is a web based service to manage git repositories in a social way. You can create new repositories, fork others, modify the codebase and send your changes back. There are many more very cool features, but we keep it here for now.
-  
+
   ## What is cloudControl? – A PHP PaaS!
-  
+
   Yes, that’s it: a great PHP platform as a service (PaaS) on top of Amazon Web Services. You will have your php application deployed on multiple machines with a single command. There are plenty of add-ons available such as worker processes, MySQL database, MongoDB and memcached to name a few.
 ---
 # Requirements

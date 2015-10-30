@@ -1,6 +1,11 @@
 ---
 layout: post
 title: "Validate emails on redirects in Symfony2 with Behat"
+tags:
+    - symfony
+    - behat
+    - tutorial
+    - how-to
 ---
 
 ## Contexts

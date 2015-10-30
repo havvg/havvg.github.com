@@ -1,6 +1,11 @@
 ---
 layout: post
 title: "git rebase is not a lion, it's a cat - Part Two"
+tags:
+    - git
+    - git-rebase
+    - documentation
+    - tutorial
 excerpt:
   The first part being an introduction to git rebase mechanics,
   this follow-up drives that introduction into real-world examples.
@@ -9,9 +14,9 @@ excerpt:
 In the [previous post] we took a look at the basics of `git rebase`
 The most important part we will take a deeper look in this part: The history will be re-written.
 As mentioned in the previous post, this is not necessarily a bad thing.
-To have a greater view, we need more repositories. We could also do it in one, but that would be an aweful overact.
+To have a greater view, we need more repositories. We could also do it in one, but that would be an awful overact.
 The figure shows three repositories. One of them being the bare remote and two clones of that.
-They are all on the same state, the repostiory we left off in the first part.
+They are all on the same state, the repository we left off in the first part.
 
 ![Two repositories and their remote](/images/2012/02/git-rebase-4.png "Two repositories and their remote")
 
@@ -37,7 +42,7 @@ But, let's make this a bit more realistic by having the other repository pushed 
 ## Using rebase prior pushing changes
 
 The second repository has pushed its changes to the remote. When the first one tries this, the push will be rejected.
-This happens because the most recent commit of it does not have the remotes `HEAD` in its tree. Namingly, it means `341c62e` is not a commit that has `c7878a6` as a (grand-)ancestor.
+This happens because the most recent commit of it does not have the remotes `HEAD` in its tree. Namely, it means `341c62e` is not a commit that has `c7878a6` as a (grand-)ancestor.
 What could we do about this? Correct, we could `git pull` to retrieve the current tree from the origin. What do you think will happen here?
 A new merge commit will be added. The two commits to be merged are the `HEAD` commits of both cloned repositories - `c7878a6` and `341c62e`, respectively.
 

@@ -1,13 +1,20 @@
 ---
 layout: post
 title: "How to extend form fields in Symfony2 using extensions"
+tags:
+    - symfony
+    - form
+    - form-component
+    - form-extension
+    - tutorial
+    - how-to
 excerpt: |
   This blogpost explains on the example of adding a "help" message to widgets how to use form type extensions.
 templates:
   field_widget: |
     {% block field_widget %}
       {{ block('base_field_widget') }}
-    
+
       {% if help is defined %}
           <span class="help">{{ help }}</span>
       {% endif %}

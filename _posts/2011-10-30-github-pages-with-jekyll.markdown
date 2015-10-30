@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "Github:Pages with Jekyll"
+tags:
+    - github-pages
+    - jekyll
 excerpt: |
   Finally, my blog is now on [github:pages]!
   [github:pages]: http://pages.github.com
@@ -40,7 +43,7 @@ I have created a separate folder under the `_includes` folder, where my CSS file
 
 ## Generating a sitemap
 
-Generating a sitemap is not as easy as the stylesheet file. The greatest difference is the more complex use of [Liquid]. The first thing you want to have in your sitemap: your posts. That's an easy loop over the built-in global variable `site.posts`. 
+Generating a sitemap is not as easy as the stylesheet file. The greatest difference is the more complex use of [Liquid]. The first thing you want to have in your sitemap: your posts. That's an easy loop over the built-in global variable `site.posts`.
 
 The same method can be used to put all pages in your sitemap, too. But your 404 page, the stylesheet file and many other files should not be listed there. In order to get only pages you actually want in your sitemap, you have to somehow configure the content. I added a `sitemap` item to each page's configuration, to mark it for listing in the sitemap and provide the values for its entry. Now I can loop on `site.pages` and only include those pages!
 

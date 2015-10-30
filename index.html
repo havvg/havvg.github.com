@@ -23,9 +23,9 @@ layout: base
       {% endfor %}
     </div>
 </main>
-    
+
 <div class="bottom-closer">
-    <div class="background-closer-image" {%if site.cover.bottom %} style="background-image: url({{ site.cover.bottom }})"{% endif %}>Image</div>
+    <div class="background-closer-image"{% if site.cover.bottom %} style="background-image: url({{ site.cover.bottom }})"{% endif %}>Image</div>
     <div class="inner">
         <a class="btn" href="{{ "/archive.html" | prepend: site.baseurl }}">Find more posts in the archive.</span></a>
     </div>

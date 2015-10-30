@@ -1,2 +1,4 @@
 _site/
 _posts/*.draft.*
+/bin/
+/vendor/

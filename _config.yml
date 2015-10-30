@@ -4,6 +4,10 @@ highlighter: pygments
 safe: true
 lsi: false
 
+exclude:
+    - "bin"
+    - "vendor"
+
 url: "http://toni.uebernickel.info"
 baseurl: ""
 

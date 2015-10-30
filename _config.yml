@@ -8,6 +8,9 @@ exclude:
     - "bin"
     - "vendor"
 
+sass:
+    style: compressed
+
 url: "http://toni.uebernickel.info"
 baseurl: ""
 

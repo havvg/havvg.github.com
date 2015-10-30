@@ -17,9 +17,4 @@ sitemap:
     </div>
 </main>
 
-<div class="bottom-closer">
-    <div class="background-closer-image" {% if site.cover.bottom %} style="background-image: url({{ site.cover.bottom }})"{% endif %}>Image</div>
-    <div class="inner">
-        <a href="/" class="btn">Back to Overview</a>
-    </div>
-</div>
+{% include site/bottom_closer.html %}

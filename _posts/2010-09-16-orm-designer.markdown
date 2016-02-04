@@ -32,7 +32,7 @@ The ORM Designer makes it pretty easy to work. There are no more strange abstrac
 
 This is another part I have to admit: There are some features required. On some projects I am putting the schema definition into separated files. When I first started with ORM Designer I just wanted to import a project and wanted to see how to work with it. Well, I could not import any \*\_schema.yml file. Afterwards I took a look into the exported files, they use an other notation within the Yaml files. Here are the different notations, to get this clear.
 
-{% highlight yaml %}
+```yaml
 mcx-users:
   _attributes: { package: lib.model.user }
   user_profile:
@@ -41,9 +41,9 @@ mcx-users:
     user_id: { type: integer, foreignTable: sf_guard_user, foreignReference: id, required: true, onDelete: cascade }
     email: { type: varchar(255), index: unique }
     created_at: ~
-{% endhighlight %}
+```
 
-{% highlight yaml %}
+```yaml
 mcx-users:
   _attributes:
     package: lib.model.user
@@ -61,7 +61,7 @@ mcx-users:
       type: varchar(255)
       index: unique
     created_at: ~
-{% endhighlight %}
+```
 
 The first one is the one of my project, the second is the one ORM Designer uses. These inline dictionaries using curly brackets seem to be the problem, I guess.
 

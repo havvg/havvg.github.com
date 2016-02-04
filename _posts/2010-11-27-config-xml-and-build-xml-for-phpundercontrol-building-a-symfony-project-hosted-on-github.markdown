@@ -14,7 +14,7 @@ I don't want to take you into the installation of either [PHPUnit](http://www.ph
 
 Let me explain, what my setup looks like. I'm hosting the project on [github.com](https://github.com/) as a private repository. Side note: add the public key of your CI to your account to be able to clone these. This project uses symfony with Propel and PHPUnit.
 
-{% highlight xml %}
+```xml
 <cruisecontrol>
   <project name="megacomplex" buildafterfailed="false">
     <schedule interval="60">
@@ -43,13 +43,13 @@ Let me explain, what my setup looks like. I'm hosting the project on [github.com
     </publishers>
   </project>
 </cruisecontrol>
-{% endhighlight %}
+```
 
 This is the config.xml for CruiseControl. The important parts are the `<bootstrappers>` and `<modificationset>`. These two are required to make usage of the git hosting. These two point to a source directory, where I am cloning the repository into.
 
 The publishers are well documented. The first one is for the output of PHPDocumentor and the second one for the coverage report of PHPUnit.
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <project name="Megacomplex" default="build" basedir=".">
   <property name="git-repository" value="git@github.com:havvg/Megacomplex.git" />
@@ -143,7 +143,7 @@ The publishers are well documented. The first one is for the output of PHPDocume
     </exec>
   </target>
 </project>
-{% endhighlight %}
+```
 
 The build.xml contains all commands being execute to build the software once. The first part is the setup of some properties being used by this build file. It removes source and build directory to have a clean environment to start. The git `<modificationset>` passes a "gitcommitid" to the build file as a property. This can be used (see comment) while bi-secting your project. By default this is set with the master branch, which I'm running this build on. To add another branch, setup another project in CruiseControl with the other branch.
 

@@ -10,7 +10,7 @@ I encountered some errors while configuring my [phpUnderControl](http://phpunder
 
 The other error was about this warning `Git - warning: Log for '' only goes back to [date]`. This warning is thrown when you don't have _a local reflog_ back to that given date. This happened to me, because I removed the git repository within my build and cloned it on each build. This warning is no problem for the modificationset. However, I didn't want this warning, so I updated my config.xml to use a cleanroom for the bootstrapper and the modificationset. Once built this warning should not occur another time, because you are not loosing the reflog of git anymore. I still clone the repository on each build, but this cleanroom won't be touched anytime.
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <cruisecontrol>
   <project name="megacomplex" buildafterfailed="false">
@@ -40,4 +40,4 @@ The other error was about this warning `Git - warning: Log for '' only goes back
     </publishers>
   </project>
 </cruisecontrol>
-{% endhighlight %}
+```

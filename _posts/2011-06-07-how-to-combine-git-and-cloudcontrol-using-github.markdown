@@ -53,10 +53,10 @@ Knowing your environment is essential, but now let’s get started.
 
 Here are the very basic steps to get a new project set up locally. We call the example project “githubcctut” for github cloudControl tutorial.
 
-{% highlight bash %}
+```bash
   $ mkdir githubcctut
   $ cd githubcctut/
-{% endhighlight %}
+```
 
 We now got an empty folder, where our source code and other files will be put into. Using `git init` we will make this empty folder a new git repository. This repository now only contains one branch “master”, the default.
 
@@ -124,29 +124,29 @@ Git uses several files to set up the configuration being used. Create a .gitconf
 
 To set your name and email on your git environment add:
 
-{% highlight ini %}
+```ini
 [user]
 name = Your Full Name
 email = yourmail@host.com
-{% endhighlight %}
+```
 
 ## Sending changes
 
 As git will send changes on any branch, it might be useful, to control what will be sent. The following lines will tell git to only push changes to the remote repositories that are set up as “tracking” when issuing `git push` without any more arguments.
 
-{% highlight ini %}
+```ini
 [push]
 default = tracking
-{% endhighlight %}
+```
 
 ## Excluding system specific files
 
 You can create a list of files that will be ignored by git. This list is saved in the .gitignore file in any folder of the repository. In addition to the repository and its project or language specific ignore list, you may have a system or user specific list of files to be ignored on all of your repositories. This file can be published to git using these lines.
 
-{% highlight ini %}
+```ini
 [core]
 excludesfile = ~/.gitignore
-{% endhighlight %}
+```
 
 The content of the file mentioned is a list (line based) of regular expressions of files to be ignored.
 
@@ -154,11 +154,11 @@ The content of the file mentioned is a list (line based) of regular expressions 
 
 Applications – such as the previously mentioned Tower – make use of the following lines.
 
-{% highlight ini %}
+```ini
 [github]
 user = YourAccountName
 token = YourApiToken
-{% endhighlight %}
+```
 
 You can retrieve the token on the admin interface of your github account.
 
@@ -166,13 +166,13 @@ You can retrieve the token on the admin interface of your github account.
 
 Setting up shorter aliases may be helpful. Here is a sample list for users who are familiar with subversion.
 
-{% highlight ini %}
+```ini
 [alias]
 st = status
 ci = commit
 co = checkout
 di = diff
-{% endhighlight %}
+```
 
 [Tower]: http://www.git-tower.com/
 [create a new repository]: https://github.com/repositories/new

@@ -128,13 +128,13 @@ templates:
 
 ## The form types
 
-{% highlight php %}
+```php
 {{ page.templates.post_type }}
-{% endhighlight %}
+```
 
-{% highlight php %}
+```php
 {{ page.templates.tag_type }}
-{% endhighlight %}
+```
 
 ## The prototype macro
 
@@ -143,27 +143,27 @@ I added a macro to handle the prototyping in `Twig` templates.
 This macro renders the `prototype` and the actual `widget` the same way.
 Therefore the resulting usage code is very little and required javascript code just works for all collections.
 
-{% highlight jinja %}
+```jinja
 {{ page.templates.macro }}
-{% endhighlight %}
+```
 
 ## Example usage
 
 You should - at least on more advanced forms - render each row or widget manually.
 The example shows how to make use of the given macro. You can easily add parameters to the macro to further customize the actual result depending on your needs.
 
-{% highlight jinja %}
+```jinja
 {{ page.templates.usage }}
-{% endhighlight %}
+```
 
 The javascript required to handle the `add` and `delete` of a tag is very small.
 The script is very basic, you might want to check for existing objects, verify related items and much more.
 
 Using `jQuery` it comes down to this:
 
-{% highlight javascript %}
+```javascript
 {{ page.templates.javascript }}
-{% endhighlight %}
+```
 
 The relation between the add button and the collection is built by the `data-target` of the link and the `id` attribute of the container.
 

@@ -4,7 +4,7 @@ title: git checkout name in bash primary prompt
 ---
 You want to have an overview of your current git checkout in your bash prompt? Then read on!
 
-{% highlight bash %}
+```bash
 parse_git_branch () {
   git name-rev HEAD 2> /dev/null | sed -e 's/\^0$//' | sed 's#HEAD\ \(.*\)# (\1)#'
 }
@@ -16,7 +16,7 @@ BLUE="\[\033[01;34m\]"
 GREEN="\[\033[0;32m\]"
  
 export PS1="$BLACK\u@\h:$GREEN\w$RED_BOLD\$(parse_git_branch)$BLACK \$ "
-{% endhighlight %}
+```
 
 Here some explanation, on what's going on. The obvious one is the `git name-rev HEAD` command, which will retrieve a named revision for you. The first usage of the stream editor (sed) simply strips the "^0" at the end of the name, which means in git terms, that's the exact commit of the name, it's prefixed to. Any other refs will be shown, so if you are one commit before the tag, it will be shown with a "^1". The second sed command strips some more output from the orignal. It turns "HEAD tags/3.5.5" into "tags/3.5.5" by simply stripping "HEAD ".
 

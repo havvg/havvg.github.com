@@ -16,7 +16,7 @@ I got a [simple feed](http://bestof.wstar.de/feed "Best of White Star Clan") usi
 ## add Last-Modified
 
 The first request is delivering the complete feed and has to add the "Last-Modified" HTTP header. In order to do this, we use the given postExecute() method of the feedActions.
-{% highlight php %}
+```php
 <?php
 /**
  * send the Last-Modified HTTP header
@@ -26,7 +26,7 @@ public function postExecute()
   $latestEntry = EntryPeer::getLatestEntry();
   $this->getResponse()->setHttpHeader('Last-Modified', $latestEntry->getCreatedAt('r'));
 }
-{% endhighlight %}
+```
 
 Well yeah, we don't care about the use case here, as this header can be sent without harming anything.
 
@@ -36,7 +36,7 @@ The user does the second request, which contains the `If-Modified-Since` HTTP he
 
 In order to stop symfony doing the work, you have to explicitly send out the response before the `executeAction()` method is called. This will also be done within the `preExecute()` method.
 
-{% highlight php %}
+```php
 <?php
 /**
  * check whether this request has changed
@@ -55,7 +55,7 @@ private function preExecute()
     } # else: use case 3
   } # else: use case 1
 }
-{% endhighlight %}
+```
 
 If there is no `If-Modified-Since` header given we are in use case #1. If the header is sent and the date given is the same as the latest item, we are in use case #2. Last but not least, if the header is given and there is a new item - the date in the `If-Modified-Since` header does not match the `created_at` field - we are in use case #3.
 

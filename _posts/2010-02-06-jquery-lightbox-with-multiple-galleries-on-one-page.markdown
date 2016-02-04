@@ -6,16 +6,16 @@ title: jQuery lightBox with multiple galleries on one page
 
 A simple call for lightBox looks something like this.
 
-{% highlight javascript %}
+```javascript
 $('#photos .gallery a').lightBox();
-{% endhighlight %}
+```
 
 Imagine you have several separated elements of the class `gallery` nested under the photos node. LightBox will put all of these images in one gallery.
 
 The following code snippet will call lightBox multiple times separating each gallery from all others.
 
-{% highlight javascript %}
+```javascript
 $('#photos .gallery').each(function() {
   $('a', $(this)).lightBox();
 });
-{% endhighlight %}
+```

@@ -6,8 +6,8 @@ As stated in the jQuery API Documentation, [the triggerHandler() method](http://
 
 However, this is nothing unusual. In fact, it might be a common way to work within an advanced AJAX enabled webapplication. I encountered this problem this evening and also created a simple workaround. The following code snippet works just fine.
 
-{% highlight javascript %}
+```javascript
 var event = new $.Event('click');
 event.preventDefault();
 $('input:submit', $(this)).trigger(event);
-{% endhighlight %}
+```

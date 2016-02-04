@@ -26,9 +26,9 @@ Was im Grunde gemacht werden soll, ist Folgendes. Es gibt mehrere Fenster, die e
 
 Diese Liste sieht dann also in etwa so aus.
 
-{% highlight javascript %}
+```javascript
 snapLines = [ [34, 23, 234, 323], [46, 46, 246, 346] ];
-{% endhighlight %}
+```
 
 Diese Liste entspricht zwei Fenstern, die beide 200x300 Pixel groß sind. Das eine liegt auf der Position (links-oben) 34;23 und das andere Fenster auf Position 46;46.
 
@@ -38,13 +38,13 @@ Ich habe mich der Einfachheit halber, da in einem Webdokument Elemente von links
 
 Als erstes hole ich die aktuelle Position des bewegenden Fensters.
 
-{% highlight javascript %}
+```javascript
 currentPosition = getSnapLinesByObject( drag_object );
-{% endhighlight %}
+```
 
 Danach erzeuge ich mir zwei Listen für die verfügbaren Hilfslinien (horizontal und vertikal).
 
-{% highlight javascript %}
+```javascript
 // these rules are virtual
 // not all are really present (explained below)
 rules = [];
@@ -52,11 +52,11 @@ rules = [];
 rules[ 0 ] = [];
 // horizontal rules
 rules[ 1 ] = [];
-{% endhighlight %}
+```
 
 Danach geht man einfach jedes bekannte Fenster durch und fügt die entsprechenden Kanten hinzu.
 
-{% highlight javascript %}
+```javascript
 // in order to check only for left and top position (rules)
 // a virtual rule is created
 // which is the right edge of a window set depending on the left edge of the dragged window
@@ -64,7 +64,7 @@ Danach geht man einfach jedes bekannte Fenster durch und fügt die entsprechende
 
 // x1 coordinate of any tab
 rules[ 0 ].push( snapLines[ i ][ 0 ] );
-{% endhighlight %}
+```
 
 ### "virtuelle Kanten" bestimmen
 
@@ -72,16 +72,16 @@ Da ich das Fenster nur an einer Kante ausrichten möchte (links), das Fenster ab
 
 Die rechte Kante ist von der linken Kante genau soweit entfernt, wie das Fenster breit ist. Im Umkehrschluß bedeutet das für die linke Kante, an der ich ausrichte, dass es eine weitere "virtuell Kante" gibt. Die Kante bezeichne ich als "virtuell", da sie real nicht existiert. Wenn ich also die rechte Kante auch ausrichten möchte, muss ich für die linke Kante eben genau die Breite vom Fenster weiter links diese virtuelle Kante ablegen. Dadurch richtet sich das zu bewegende Fenster eben auch - augenscheinlich - an seiner rechten Kante aus. Das Prinzip wird natürlich auch für die vertikalen Kanten angewandt.
 
-{% highlight javascript %}
+```javascript
 // virtual x1 coordinate
 rules[ 0 ].push( snapLines[ i ][ 0 ] - drag_object.offsetWidth );
-{% endhighlight %}
+```
 
 ## Fenster an Hilfslinien ausrichten
 
 Sobald man also alle Kanten gesammelt hat, kann das Fenster ausgerichtet werden. Dieser Teil ist recht einfach. Ich geh einfach alle gesammelten Kanten durch, und schaue nach, wie weit die linke Kante des bewegenden Fensters von jeder Hilfslinie entfernt ist - egal ob von links oder rechts (Zeile 132-140). Wenn die Hilfslinie in greifbare Nähe ist, wird das Fenster auf diese Hilfslinie positioniert.
 
-{% highlight javascript %}
+```javascript
 // check for vertical snap
 for ( var snapLine in rules[ 0 ] )
 {
@@ -104,13 +104,13 @@ for ( var snapLine in rules[ 0 ] )
     drag_object.style.left = snapLine + "px";
   }
 }
-{% endhighlight %}
+```
 
 Ich hoffe, ich konnte helfen :) Der komplette Quellcode in einem Stück liegt auf der nächsten Seite und kann dort direkt heruntergeladen werden.
 
 ## Code
 
-{% highlight javascript %}
+```javascript
 // only try to snap, if there are more than this tab
 if ( snapLinesCount > 1 )
 {
@@ -203,4 +203,4 @@ if ( snapLinesCount > 1 )
     }
   }
 }
-{% endhighlight %}
+```

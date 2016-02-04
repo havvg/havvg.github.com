@@ -13,7 +13,7 @@ Wikipedia, the free encyclopedia:
 
 Let's say you got two models having the same properties and you want to save them in the same table. The example below takes a simple entry/comment relation. An entry may actually be a post or a comment on this post, the schema.yml would look like this.
 
-{% highlight yaml %}
+```yaml
 propel:
   entries:
     _attributes: { phpName: Entry }
@@ -28,13 +28,13 @@ propel:
     title: { type: varchar(255), required: true }
     body: { type: longvarchar, required: true }
     author_id: { type: bigint, required: true, index: true }
-{% endhighlight %}
+```
 
 Using propel:build-model will generate you the models for comments (Comment, CommentPeer ..) and the same for entries (Entry, EntryPeer ..).
 
 ## The database
 
-{% highlight sql %}
+```sql
 # This is a fix for InnoDB in MySQL >= 4.1.x
 # It "suspends judgement" for fkey relationships until are tables are set.
 SET FOREIGN_KEY_CHECKS = 0;
@@ -75,11 +75,11 @@ CREATE TABLE `comments`
  
 # This restores the fkey checks, after having unset them earlier
 SET FOREIGN_KEY_CHECKS = 1;
-{% endhighlight %}
+```
 
 Above you can see, how the generated SQL using propel:build-sql looks like. In our example we will modify this SQL a bit. We remove the comments part completely. The SQL should now look like this (incomplete).
 
-{% highlight sql %}
+```sql
 DROP TABLE IF EXISTS `entries`;
  
 CREATE TABLE `entries`
@@ -91,13 +91,13 @@ CREATE TABLE `entries`
 	PRIMARY KEY (`id`),
 	KEY `entries_I_1`(`author_id`)
 )Type=InnoDB;
-{% endhighlight %}
+```
 
 Using propel:insert-sql should only create the entries table. To make this example easier, we will generate the admin module with propel using propel:generate-admin as follows.
 
-{% highlight bash %}
+```bash
 $ php symfony propel:generate-admin --module="adminEntries" backend Entry
-{% endhighlight %}
+```
 
 Add some entries using this admin module, also add some comments and mark them e.g. \[Comment\] in the title or something else.
 
@@ -105,7 +105,7 @@ Add some entries using this admin module, also add some comments and mark them e
 
 The way propel handels the relation between your model and which table is used for it, is pretty easy. The BaseCommentPeer class has a property TABLE_NAME, by overwriting this and all of the attributes column names in the inherited class CommentPeer you got all you needed!
 
-{% highlight php %}
+```php
 <?php
  
 class CommentPeer extends BaseCommentPeer
@@ -165,11 +165,11 @@ class CommentPeer extends BaseCommentPeer
 		BasePeer::TYPE_NUM => array (0, 1, 2, 3, )
 	);
 }
-{% endhighlight %}
+```
 
 Now the comments are mapped to the entries table in the database. So let's test it.
 
-{% highlight php %}
+```php
 <?php
  
 require_once(dirname(__FILE__) . '/../bootstrap/unit.php');
@@ -242,13 +242,13 @@ foreach ($fakeComments as $eachComment)
 {
 	$limeTest->isa_ok($eachComment, 'Comment', 'Comment OK: ' . $eachComment->getId());
 }
-{% endhighlight %}
+```
 
 Now you can call the unit test using the following command line.
 
-{% highlight bash %}
+```bash
 $ php symfony test:unit EntriesComments
-{% endhighlight %}
+```
 
 The result should like this:
 

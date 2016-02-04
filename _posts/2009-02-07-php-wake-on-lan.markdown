@@ -6,7 +6,7 @@ excerpt: Ich habe neben meinem Macbook natürlich auch einen Desktoprechner. Die
 Ich habe neben meinem Macbook natürlich auch einen Desktoprechner. Dieser läuft natürlich nicht den ganzen Tag durch, wer sollte auch die Stromkosten dafür aufbringen :). Dennoch wär es hilfreich, wenn ich den Rechner einfach hochfahren könnte - von überall. Die Technik dazu ist nichts Neues und trägt den passenden Namen "[Wake On LAN](http://de.wikipedia.org/wiki/Wake_On_LAN "Wake On LAN - Wikipedia")" (dt. Aufwecken über [LAN](http://de.wikipedia.org/wiki/Local_Area_Network "Local Area Network - Wikipedia")). Ich hab mir also einfach eine Funktion geschrieben, die genau diese Aufgabe in PHP widerspiegelt und erfüllt. Den kompletten Quellcode kann man hier einfach downloaden und direkt benutzen.
 
 Hier der vollständige und dokumentierte Code.
-{% highlight php %}
+```php
 <?php
  
 /**
@@ -150,12 +150,11 @@ function WakeOnLAN($macAddress, $hostAddress, $hostPort = 9)
     throw new SocketConnectionException('Could not open socket to ' . $hostAddress . ' on port ' . $hostPort . '. Error: ' . $errMessage, $errNo);
   }
 }
-
-{% endhighlight %}
+```
 
 Die Verwendung ist recht einfach. Man lädt die Datei z.B. mit include_once() und kann dann die Funktion wie folgt aufrufen.
 
-{% highlight php %}
+```php
 <?php
 include_once('wake_on_lan.php');
 
@@ -173,5 +172,4 @@ catch (WakeOnLANException $e)
   // wake on lan request failed
   echo 'The Wake On LAN packet was not sent properly.', "\n", $e;
 }
- 
-{% endhighlight php %}
+```

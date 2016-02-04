@@ -16,7 +16,7 @@ Before we can actually start, we need some more step definitions. As we follow D
 
 In the documentation you can see, how to add those contexts to your current context:
 
-{% highlight php %}
+```php
 <?php
 
 namespace Acme\Bundle\DemoBundle\Features\Context;
@@ -33,7 +33,7 @@ class FeatureContext extends MinkContext
         parent::__construct($kernel);
     }
 }
-{% endhighlight %}
+```
 
 If you now issue `php app/console behat -e test -dl @AcmeDemoBundle` you will notice some more step definitions.
 
@@ -52,7 +52,7 @@ Let's see, what our expected behavior is. As an example we take a look at the [R
 
 Now it's time to take a look at the step definitions to verify this behavior using Behat. The first two steps are very common and you should already be familiar with them:
 
-{% highlight gherkin %}
+```gherkin
 Feature: User Registration
     In order to become a registered user
     As an anonymous user
@@ -68,7 +68,7 @@ Feature: User Registration
           And I press "Register"
          Then the response status code should be 200
           And the response should contain "The user has been created successfully"
-{% endhighlight %}
+```
 
 This will fill out the form and submit it and expects the user to see the confirmation site.
 
@@ -84,7 +84,7 @@ Why that? It's because the email has been sent before the user has been redirect
 
 The first one will not immediately follow a redirect and allows for inspection of this request. The second expects a redirect to a given URL and follows it. By adding those two correctly, we will have access to the mailer on the correct request.
 
-{% highlight gherkin %}
+```gherkin
 Feature: User Registration
     In order to become a registered user
     As an anonymous user
@@ -104,7 +104,7 @@ Feature: User Registration
          Then I should be redirected to "/register/check-email"
           And the response status code should be 200
           And the response should contain "The user has been created successfully"
-{% endhighlight %}
+```
 
 [Behat\CommonContexts]: https://github.com/Behat/CommonContexts
 [FOSUserBundle]: https://github.com/FriendsOfSymfony/FOSUserBundle

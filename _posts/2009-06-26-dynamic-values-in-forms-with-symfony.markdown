@@ -7,7 +7,7 @@ Let's imagine you have a form set up and want to add some dynamic values to the 
 
 The example model (`wspNopasteEntry`) below has a property `created_by` which refers to a `sfGuardUser` (or anonymous). So, at first you have to unset the form field for the user using [the inherited setup() method of the form](http://www.symfony-project.org/api/1_2/sfForm#method_setup "symfony API » sfForm Class") itself.
 
-{% highlight php %}
+```php
 <?php
 /**
  * set up the form
@@ -17,11 +17,11 @@ public function setup()
   parent::setup();
   unset($this['created_by']);
 }
-{% endhighlight %}
+```
 
 Now, the user has no field to enter any kind of user id. While processing the form, right before you save the created instance of your object to the database, you can modify the object using [the getObject() method of sfFormPropel](http://www.symfony-project.org/api/1_2/sfFormPropel#method_getobject "symfony API » sfFormPropel Class").
 
-{% highlight php %}
+```php
 <?php
 /**
  * process the form submitted by the user
@@ -56,4 +56,4 @@ protected function processForm(sfWebRequest $request, sfFormPropel $form)
     $this->getUser()->setFlash(sfConfig::get('sf_validation_error_class'), sfConfig::get('app_wsp_nopaste_plugin_form_error', 'The form is invalid.'), false);
   }
 }
-{% endhighlight %}
+```

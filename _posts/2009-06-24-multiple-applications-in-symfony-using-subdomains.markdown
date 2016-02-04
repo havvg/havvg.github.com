@@ -5,7 +5,7 @@ excerpt: You might have thought about it - me too :) It's one simple way to use 
 ---
 You might have thought about it - me too :) It's one simple way to use subdomains to manage the chosen application of your symfony project.
 
-{% highlight php %}
+```php
 <?php
 
 require_once(dirname(__FILE__).'/../config/ProjectConfiguration.class.php');
@@ -42,6 +42,6 @@ switch ($_SERVER['HTTP_HOST'])
 }
 
 sfContext::createInstance($configuration)->dispatch();
-{% endhighlight %}
+```
 
 That's the index.php I'm using for Megacomplex. On the other hand you will have to setup your webserver correctly!

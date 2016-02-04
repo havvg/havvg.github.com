@@ -32,7 +32,7 @@ total 8
 
 Now that the files exist, you can add the content in `sfGuardAuth/actions/registerAction.class.php`.
 
-{% highlight php %}
+```php
 <?php
 class registerAction extends sfAction
 {
@@ -48,6 +48,6 @@ class registerAction extends sfAction
     return sfView::SUCCESS;
   }
 }
-{% endhighlight %}
+```
 
 The only thing missing now, is a proper route and of course the action itself :)

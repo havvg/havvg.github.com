@@ -8,7 +8,7 @@ In order to being able to do this, we use the autoloader of symfony. If the `sfP
 
 I sent the patch to Frank and he is reviewing it and will hopefully apply this in the near future to the trunk. In the meanwhile, feel free to use it. But be advised that you might get conflict when you are going to update the plugin later and the actual solution was being adjusted. I will let you know, how to solve this in case it happens.
 
-{% highlight diff %}
+```diff
 Index: lib/test/sfPHPUnitPluginBaseTestCase.class.php
 ===================================================================
 --- lib/test/sfPHPUnitPluginBaseTestCase.class.php	(revision 0)
@@ -402,4 +402,4 @@ Index: data/template/functional/bootstrap.tpl
  require_once $_phpunitPluginDir.'/lib/test/sfPHPUnitBaseFunctionalTestCase.class.php';
  
  // remove all cache
-{% endhighlight %}
+```

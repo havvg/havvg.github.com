@@ -42,7 +42,7 @@ The `FormTypeExtensionInterface` does not declare this method anymore.
 If you used the interface before instead of the abstract implementation of it, you will at least be notified by PHP on the missing implementation of the `setDefaultOptions` method.
 A very basic implementation of this method looks like this, and resembles the previous `getDefaultOptions`.
 
-{% highlight php %}
+```php
 <?php
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
@@ -51,7 +51,7 @@ A very basic implementation of this method looks like this, and resembles the pr
         ));
     }
 ?>
-{% endhighlight %}
+```
 
 ## The field is gone
 
@@ -61,29 +61,29 @@ There are two places where you have to exchange "field" with "form" and everythi
 1. In the respective tag of the service definition.
 2. The `getExtendedType` method of the extension.
 
-{% highlight yaml %}
+```yaml
 services:
     form.type_extension.help_message:
         class: Acme\Bundle\DemoBundle\Form\Extension\HelpMessageTypeExtension
         tags:
           - { name: "form.type_extension", alias: "form" }
-{% endhighlight %}
+```
 
-{% highlight php %}
+```php
 <?php
     public function getExtendedType()
     {
         return 'form';
     }
 ?>
-{% endhighlight %}
+```
 
 ## The HelpMessageTypeExtension
 
 This is the updated version of the `HelpMessageTypeExtension`.
 It resembles the previous behavior as much as possible, although it's not required to do it that way in Symfony 2.1.
 
-{% highlight php %}
+```php
 <?php
 
 namespace Acme\Bundle\DemoBundle\Form\Extension;
@@ -119,7 +119,7 @@ class HelpMessageTypeExtension extends AbstractTypeExtension
     }
 }
 ?>
-{% endhighlight %}
+```
 
 ## The AutocompleteExtension
 
@@ -130,7 +130,7 @@ See [autocomplete at whatwg] for more details on which types are available.
 This version removes the setting of an attribute on the form.
 This is possible, because the `buildView` now retrieves the provided `$options` directly, so no need to store the information twice, anymore.
 
-{% highlight php %}
+```php
 <?php
 
 namespace Acme\Bundle\DemoBundle\Form\Extension;
@@ -174,15 +174,15 @@ class AutocompleteExtension extends AbstractTypeExtension
     }
 }
 ?>
-{% endhighlight %}
+```
 
-{% highlight yaml %}
+```yaml
 services:
     form.type_extension.autocomplete:
         class: Acme\Bundle\DemoBundle\Form\Extension\AutocompleteExtension
         tags:
           - { name: "form.type_extension", alias: "form" }
-{% endhighlight %}
+```
 
 [previous post]: /2011/11/25/how-to-extend-form-fields-in-symfony2.html
 [the form documentation]: http://symfony.com/doc/2.1/cookbook/form/form_customization.html#adding-help-messages

@@ -25,9 +25,9 @@ templates:
 
 In case you have read [the form documentation], you will have noticed, that the example won't work out of the box.
 
-{% highlight jinja %}
+```jinja
 {{ page.templates.field_widget }}
-{% endhighlight %}
+```
 
 ## What are form extensions?
 
@@ -43,7 +43,7 @@ The `option` - or `attribute` on the builders side - gets defined and defaults t
 The `getExtendedType` method defines on which `FormType`s this extension may be applied.
 To allow every `FormType` be extended by this extensions, it return `field` the base `FormType`.
 
-{% highlight php %}
+```php
 <?php
 
 namespace Acme\Bundle\DemoBundle\Form\Extension;
@@ -78,7 +78,7 @@ class HelpMessageTypeExtension extends AbstractTypeExtension
     }
 }
 ?>
-{% endhighlight %}
+```
 
 ## Dependency Injection
 
@@ -92,19 +92,19 @@ Important for this definition are two things.
 2. As mentioned there are several types of extensions, so another specification is required.
    To have the extension being applied on fields, the `alias` will be `field`.
 
-{% highlight yaml %}
+```yaml
 services:
     form.type_extension.help_message:
         class: Acme\Bundle\DemoBundle\Form\Extension\HelpMessageTypeExtension
         tags:
           - { name: "form.type_extension", alias: "field" }
-{% endhighlight %}
+```
 
 ## Example Form
 
 Now that the extension is written and made available to the `Form` component of Symfony2, the `help` option is available - see the example form built below.
 
-{% highlight php %}
+```php
 <?php
 $form = $this->createFormBuilder()
     ->add('name', 'text', array(
@@ -117,7 +117,7 @@ $form = $this->createFormBuilder()
     ->add('email', 'email')
     ->getForm();
 ?>
-{% endhighlight %}
+```
 
 Note: `$this->trans()` is a shortcut method calling `trans()` on the `translator` service.
 

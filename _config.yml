@@ -45,18 +45,6 @@ author:
       url: https://www.xing.com/profile/Toni_Uebernickel
       desc: Connect on XING
 
-    - icon: flickr
-      url: http://www.flickr.com/photos/toni-uebernickel/
-      desc: My flickr stream
-
-    - icon:	youtube
-      url:	https://www.youtube.com/user/havvg
-      desc:	My YouTube channel
-
-    - icon:	facebook
-      url:	https://www.facebook.com/toni.uebernickel
-      desc:	My Facebook profile
-
 defaults:
   -
     scope:

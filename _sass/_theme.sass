@@ -5,8 +5,7 @@
 $rs: 16px
 
 $font-serif: "Georgia", serif
-$font-sans: "Open Sans", "Helvetica Neue", "Arial", "Helvetica", sans-serif
-
+$font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif
 
 @mixin respond-to($breakpoint)
   @media only screen and (max-width: $breakpoint + px)
@@ -99,7 +98,6 @@ body
     font-size: 50px
     text-align: center
     font-weight: 700
-    letter-spacing: -2px
     outline: 0
     line-height: 50px
     word-break: break-word
@@ -135,7 +133,6 @@ body
     &:last-child
       border-bottom: 0px
     .post-title
-      letter-spacing: -0.02em
       font-weight: 700
       font-style: normal
       display: block
@@ -148,7 +145,6 @@ body
         &:hover
           text-decoration: none
     .post-excerpt
-      letter-spacing: -0.02em
       font-weight: 300
       font-style: normal
       font-size: 20px

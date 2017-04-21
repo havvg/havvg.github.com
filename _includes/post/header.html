@@ -3,18 +3,8 @@
     {% assign author = page.author %}
 {% endif %}
 
-{% assign image = page.image %}
-
-<div class="{% if image %}article-image{% else %}noarticleimage{% endif %}">
-    {% if image %}<div class="post-image-image" style="background-image: url({{ image }})">Article Image</div>{% endif %}
-    <div class="post-meta">
-        <h1 class="post-title" itemprop="headline">{{ page.title }}</h1>
-        <div class="cf post-meta-text">
-            <div class="author-image" style="background-image: url({{ site.author.image }})">Blog Logo</div>
-            <h4 class="author-name">{{ author }}</h4>
-            {% if page.date %}on <time datetime="{{ page.date | date: "%F %R" }}">{{ page.date | date_to_string }}</time>{% endif %}
-            <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
-        </div>
-        {% if image %}<div style="text-align:center"><a href="#topofpage" class="topofpage"><i class="fa fa-angle-down"></i></a></div>{% endif %}
-    </div>
-</div>
+<header>
+    <h1 itemprop="headline">{{ page.title }}</h1>
+    <span>{{ author }}{% if page.date %} <time datetime="{{ page.date | date: "%F %R" }}">on {{ page.date | date_to_string }}</time>{% endif %}</span>
+    <!-- , tagged on {{#foreach tags}}<span class="post-tag-{{slug}}">{{#if @first}}{{else}}, {{/if}}<a href="/tag/{{slug}}">{{name}}</a></span>{{/foreach}} -->
+</header>

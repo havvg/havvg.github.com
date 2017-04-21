@@ -6,11 +6,14 @@ safe: true
 lsi: false
 
 exclude:
-    - "bin"
-    - "vendor"
+  - "bin"
+  - "vendor"
 
 sass:
-    style: compressed
+  style: compressed
+
+gems:
+  - jekyll-assets
 
 url: "http://toni.uebernickel.info"
 baseurl: ""
@@ -20,15 +23,12 @@ description: Developing Software is Fun!
 
 favicon: https://secure.gravatar.com/avatar/1b0644b408ccd789b0178b2b0c860cea?s=240
 logo: https://secure.gravatar.com/avatar/1b0644b408ccd789b0178b2b0c860cea?s=240
-cover:
-  top: /images/cover.jpg
-  bottom: /images/cover.jpg
 
 author:
   name: Toni Uebernickel
   email: tuebernickel@gmail.com
   image: https://secure.gravatar.com/avatar/1b0644b408ccd789b0178b2b0c860cea?s=240
-  bio: Software Engineer and Architect, Symfony and Propel evangelist with some Ducati bikes.
+  bio: Software Engineer and Architect, Symfony evangelist with some Ducati bikes.
   social:
     - icon: github
       url: https://github.com/havvg

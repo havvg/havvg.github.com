@@ -1,10 +1,13 @@
-<footer class="site-footer">
-    <a class="subscribe" href="{{ "/atom.xml" | prepend: site.baseurl }}"><span class="tooltip"><i class="fa fa-rss"></i> You should subscribe to my feed!</span></a>
-    <div class="inner">
-        <section class="copyright">All content copyright <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-        <section class="poweredby">Proudly published with <a href="http://jekyllrb.com">Jekyll</a> on <a href="https://pages.github.com">GitHub Pages</a></section>
+<footer>
+    <a class="subscribe" href="{{ "/atom.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> You should subscribe to my feed!</a>
+
+    <div>
+        <span>All content copyright <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a></span>
+        <span>&copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</span>
+        <span>Proudly published with <a href="http://jekyllrb.com">Jekyll</a> on <a href="https://pages.github.com">GitHub Pages</a></span>
     </div>
-    <div class="inner">
-        <section><a href="{{ "/imprint.html" | prepend: site.baseurl }}">Impressum &#038; Datenschutzerklärung</a></span>
+
+    <div>
+        <span><a href="{{ "/imprint.html" | prepend: site.baseurl }}">Impressum &#038; Datenschutzerklärung</a></span>
     </div>
 </footer>

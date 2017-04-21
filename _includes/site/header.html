@@ -1,0 +1,13 @@
+<header>
+    <h1><a href="{{ site.url }}">{{ site.title }}</a></h1>
+    <h2>{{ site.description }}</h2>
+
+    <nav>
+        {% for social in site.author.social %}
+            {% if social.url %}
+                <a class="icon-{{ social.icon }}" href="{{ social.url }}" title="{{ social.desc }}"><i class="fa fa-{{ social.icon }}"></i></a>
+                {% if false == forloop.last %}&nbsp;&nbsp;·&nbsp;&nbsp;{% endif %}
+            {% endif %}
+        {% endfor %}
+    </nav>
+</header>

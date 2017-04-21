@@ -1,20 +1,11 @@
 ---
-layout: base
+layout: site
 title: Archive
 sitemap:
   priority: 0.7
   changefreq: weekly
   lastmod: 2011-09-29T18:56:19+02:00
 ---
-{% include site/teaser_image.html %}
-{% include blog/header.html %}
-
-<main class="content" role="main">
-    <div class="cf">
-      {% for post in site.posts %}
-		  {% include post/preview.html %}
-      {% endfor %}
-    </div>
-</main>
-
-{% include site/bottom_closer.html %}
+{% for post in site.posts %}
+    {% include post/preview.html %}
+{% endfor %}

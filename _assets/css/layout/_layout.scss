@@ -1,0 +1,159 @@
+body {
+    &.site {
+        > main {
+            padding: 3vh 0;
+
+            section {
+                font-size: 1.25rem;
+            }
+        }
+    }
+
+    > header {
+        background-color: #fff;
+        border-bottom: #eee 1px solid;
+        font-family: $font-family-sans-serif;
+        padding: 5vh 0;
+        text-align: center;
+
+        a:focus,
+        a:hover {
+            border: none;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 3.1rem;
+            font-weight: $font-weight-semibold;
+            letter-spacing: 0.07rem;
+            line-height: 1.2;
+            margin-bottom: 0.8vh;
+            word-spacing: 0.4rem;
+
+            a {
+                color: #333;
+
+                &:focus,
+                &:hover {
+                    color: #666;
+                }
+            }
+        }
+
+        h2 {
+            color: #ababab;
+            font-size: 1.3rem;
+            font-weight: $font-weight-light;
+            letter-spacing: 0.07rem;
+            line-height: 1.5;
+            margin-bottom: 2vh;
+            word-spacing: 0.25rem;
+        }
+
+        nav {
+            color: #ccc;
+            font-size: 1.3rem;
+            word-spacing: 0.1rem;
+
+            a {
+                color: #888;
+
+                &:focus,
+                &:hover {
+                    color: #333;
+                }
+            }
+        }
+    }
+
+    > footer {
+        background-color: #fafafa;
+        border-top: #eee 1px solid;
+        color: #999;
+        font-family: $font-family-sans-serif;
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+        margin-top: 4vh;
+        padding: 4vh 0;
+        text-align: center;
+
+        a {
+            color: #666;
+        }
+
+        > div {
+            margin: 1vh 0;
+
+            span {
+                display: block;
+            }
+        }
+    }
+}
+
+a,
+a:focus,
+a:hover{
+    text-decoration: none;
+    outline: none;
+}
+
+a:focus,
+a:hover {
+    border-bottom: 1px solid;
+}
+
+address {
+    font-family: $font-family-sans-serif;
+    font-style: normal;
+
+    * {
+        margin-right: 0.4rem;
+    }
+
+    > span,
+    a,
+    span.street-address,
+    span.country-name {
+        display: block;
+    }
+
+    .adr {
+        margin: 0.2rem 0 0.5rem 0;
+    }
+
+    .n {
+        font-weight: $font-weight-semibold;
+    }
+}
+
+blockquote {
+    border-left: #0288D1 3px solid;
+    font-style: italic;
+    letter-spacing: 0.02rem;
+    margin-left: -0.8rem;
+    padding-left: 0.8rem;
+}
+
+main {
+    margin: 0 auto;
+    max-width: 60rem;
+    padding: 0 1.25rem;
+}
+
+nav.bottom-closer {
+    font-family: $font-family-sans-serif;
+    padding: 2vh 0;
+    text-align: center;
+}
+
+pre {
+    background-color: #fcfcfc;
+    border: #eaeaea 1px solid;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.bio {
+    color: #666;
+}

@@ -2,18 +2,11 @@
 <html>
     {% include layout/head.html %}
 
-    <body>
-        {% include layout/header.html %}
+    <body class="site">
+        {% include site/header.html %}
 
-        <main class="content" role="main">
-            <article class="post">
-                {% include post/header.html %}
-
-                <section class="post-content">
-                    <a name="topofpage"></a>
-                    {{ content }}
-                </section>
-            </article>
+        <main>
+            {{ content }}
         </main>
 
         {% include site/bottom_closer.html %}

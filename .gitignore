@@ -1,4 +1,5 @@
-_site/
-_posts/*.draft.*
+/.asset-cache/
+/_drafts/
+/_site/
 /bin/
 /vendor/

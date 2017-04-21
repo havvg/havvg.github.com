@@ -20,7 +20,7 @@
 
     <link rel="icon" type="image/jpg" href="{{ site.favicon }}" />
 
-    <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl  }}" />
+    {% css main %}
 
     {% if nil == page.id %}
         <link rel="prefetch" href="{{ site.posts.first.url }}" />

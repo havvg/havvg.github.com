@@ -2,65 +2,67 @@
 <html>
     {% include layout/head.html %}
 
-    <body itemscope itemtype="http://schema.org/BlogPosting">
-        {% include layout/header.html %}
+    <body class="post" itemscope itemtype="http://schema.org/BlogPosting">
+        {% include site/header.html %}
 
-        <main class="content" role="main">
+        <main>
             <article class="post">
                 {% include post/header.html %}
 
-                <section class="post-content">
-                    <a name="topofpage"></a>
-                    <div itemprop="articleBody">{{ content }}</div>
+                <section itemprop="articleBody">
+                    {{ content }}
                 </section>
 
-                <nav class="bottom-teaser pagination cf" role="navigation">
+                <nav>
                     {% if page.previous %}
-                        <div class="isLeft">
-                            <h5 class="index-headline"><span>Previous post</span></h5>
+                        <section>
+                            <h5>Previous post</h5>
                             <a href="{{ page.previous.url }}">{{ page.previous.title }}</a>
-                        </div>
+                        </section>
                     {% endif %}
+
                     {% if page.next %}
-                        <div class="isRight">
-                            <h5 class="index-headline"><span>Next post</span></h5>
+                        <section>
+                            <h5>Next post</h5>
                             <a href="{{ page.next.url }}">{{ page.next.title }}</a>
-                        </div>
+                        </section>
                     {% endif %}
                 </nav>
 
-                <footer class="post-footer">
-                    {% include post/comments.html %}
-                </footer>
+                {% include post/comments.html %}
 
-                <div class="bottom-teaser cf">
-                    <div class="isLeft">
-                        <h5 class="index-headline featured"><span>Written by</span></h5>
-                        <section class="author">
-                            <div class="author-image" style="background-image: url({{ site.author.image }})">Blog Logo</div>
+                <footer>
+                    <section>
+                        <h5>Written by</h5>
+                        <div class="author">
+                            <span class="author-image" style="background-image: url({{ site.author.image }})"></span>
                             <h4>{{ site.author.name }}</h4>
                             <p class="bio">{{ site.author.bio }}</p>
-                        </section>
-                    </div>
-                    <div class="isRight">
-                        <h5 class="index-headline featured"><span>Support &amp; Share</span></h5>
-                        <footer class="site-footer">
-                            <a class="subscribe" href="{{ "/atom.xml" | prepend: site.baseurl }}"><span class="tooltip"><i class="fa fa-rss"></i> You should subscribe to my feed!</span></a>
-                            <div class="inner">
-                                <section class="copyright">All content copyright <a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a> &copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</section>
-                            </div>
-                            <div class="inner">
-                                <a href="https://twitter.com/share" class="twitter-share-button" data-via="havvg">Tweet</a>
-                                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-                            </div>
-                        </footer>
-                    </div>
-                </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h5>Support &amp; Share</h5>
+
+                        <a href="{{ "/atom.xml" | prepend: site.baseurl }}"><i class="fa fa-rss"></i> You should subscribe to my feed!</a>
+
+                        <div>
+                            <span>All content copyright</span>
+                            <span><a href="mailto:{{ site.author.email }}">{{ site.author.name }}</a></span>
+                            <span>&copy; {{ site.time | date: '%Y' }} &bull; All rights reserved.</span>
+                        </div>
+
+                        <div>
+                            <a href="https://twitter.com/share" class="twitter-share-button" data-via="havvg">Tweet</a>
+                            <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                        </div>
+                    </section>
+                </footer>
+
+                {% include meta/page.html %}
+                {% include meta/site_author.html %}
             </article>
         </main>
-
-        {% include meta/page.html %}
-        {% include meta/site_author.html %}
 
         {% include site/bottom_closer.html %}
         {% include site/footer.html %}

@@ -15,6 +15,10 @@ sass:
 gems:
   - jekyll-assets
 
+assets:
+    compress:
+        css: true
+
 url: "http://toni.uebernickel.info"
 baseurl: ""
 

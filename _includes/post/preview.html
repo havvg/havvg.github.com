@@ -3,15 +3,16 @@
     {% assign author = post.author %}
 {% endif %}
 
-<article class="post post-excerpt" itemscope itemtype="http://schema.org/BlogPosting" role="article">
+<article class="post post-excerpt" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting" role="article">
     <header>
-        <h1 itemprop="headline"><a href="{{ post.url }}" itemprop="url">{{ post.title }}</a></h1>
-        <span>{{ author }}{% if post.date %} <time datetime="{{ page.date | date: "%F %R" }}">on {{ post.date | date_to_string }}</time>{% endif %}</span>
+        <h1 itemprop="headline"><a href="{{ post.url | prepend: site.baseurl | prepend: site.url }}" itemprop="mainEntityOfPage" itemtype="http://schema.org/URL">{{ post.title }}</a></h1>
+        <span>{{ author }}{% if post.date %} <time datetime="{{ post.date | date: "%F %R" }}">on {{ post.date | date_to_string }}</time>{% endif %}</span>
     </header>
 
     <section itemprop="description">
         {{ post.content | strip_html | truncatewords: 50 }}
     </section>
 
+    {% include meta/post.html %}
     {% include meta/site_author.html %}
 </article>

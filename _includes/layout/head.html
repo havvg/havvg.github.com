@@ -23,12 +23,12 @@
     <link rel="stylesheet" href="{{ "/assets/main.css" | prepend: site.baseurl  }}" />
 
     {% if nil == page.id %}
-        <link rel="prefetch" href="{{ site.posts.first.url }}" />
+        <link rel="prefetch" href="{{ site.posts.first.url | prepend: site.baseurl | prepend: site.url }}" />
     {% endif %}
     {% if page.previous %}
-        <link rel="prev" href="{{ page.previous.url }}" />
+        <link rel="prev" href="{{ page.previous.url | prepend: site.baseurl | prepend: site.url }}" />
     {% endif %}
     {% if page.next %}
-        <link rel="next prefetch" href="{{ page.next.url }}" />
+        <link rel="next prefetch" href="{{ page.next.url | prepend: site.baseurl | prepend: site.url }}" />
     {% endif %}
 </head>

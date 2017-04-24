@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html>
+<html itemscope itemtype="http://schema.org/Blog">
     {% include layout/head.html %}
 
-    <body class="post" itemscope itemtype="http://schema.org/BlogPosting">
+    <body class="post" itemprop="blogPost" itemscope itemtype="http://schema.org/BlogPosting">
         {% include site/header.html %}
 
-        <main>
+        <main itemprop="mainEntityOfPage">
             <article class="post">
                 {% include post/header.html %}
 

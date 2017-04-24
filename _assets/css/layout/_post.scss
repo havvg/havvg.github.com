@@ -1,7 +1,6 @@
 article.post  {
     &.post-excerpt {
         > header {
-            position: static;
             text-align: left;
 
             h1 {
@@ -14,7 +13,6 @@ article.post  {
     }
 
     > header {
-        background-color: $body-bg;
         padding: 3vh 0 2vh 0;
         text-align: center;
 
@@ -67,7 +65,7 @@ article.post  {
             @include img-fluid();
 
             display: block;
-            margin: 0 auto;
+            margin: 2vh auto;
         }
 
         ol, p {

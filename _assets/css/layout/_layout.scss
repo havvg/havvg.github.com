@@ -1,7 +1,11 @@
 body {
     &.site {
         > main {
-            padding: 3vh 0;
+            padding: 3vh 0 0 0;
+
+            article.post:first-child {
+                margin-top: -3vh;
+            }
 
             section {
                 font-size: 1.25rem;
@@ -143,7 +147,7 @@ main {
 
 nav.bottom-closer {
     font-family: $font-family-sans-serif;
-    padding: 2vh 0;
+    padding: 4vh 0;
     text-align: center;
 }
 

@@ -2976,7 +2976,9 @@ pre {
     color: #099; }
 
 body.site > main {
-  padding: 3vh 0; }
+  padding: 3vh 0 0 0; }
+  body.site > main article.post:first-child {
+    margin-top: -3vh; }
   body.site > main section {
     font-size: 1.25rem; }
 body > header {
@@ -3072,7 +3074,7 @@ main {
 
 nav.bottom-closer {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-  padding: 2vh 0;
+  padding: 4vh 0;
   text-align: center; }
 
 pre {
@@ -3085,13 +3087,11 @@ pre {
   color: #666; }
 
 article.post.post-excerpt > header {
-  position: static;
   text-align: left; }
   article.post.post-excerpt > header h1 a:focus,
   article.post.post-excerpt > header h1 a:hover {
     border: none; }
 article.post > header {
-  background-color: #fefefe;
   padding: 3vh 0 2vh 0;
   text-align: center; }
   article.post > header h1 {
@@ -3126,7 +3126,7 @@ article.post > section {
     max-width: 100%;
     height: auto;
     display: block;
-    margin: 0 auto; }
+    margin: 2vh auto; }
   article.post > section ol, article.post > section p {
     margin-bottom: 0.7rem; }
 article.post > nav,

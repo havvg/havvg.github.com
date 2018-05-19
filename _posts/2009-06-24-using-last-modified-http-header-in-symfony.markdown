@@ -1,13 +1,13 @@
 ---
 layout: post
 title: using Last-Modified HTTP Header in symfony
-excerpt: As there are many situations in which you might want to use the HTTP status code ["304 - Not Modified"](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection "List of HTTP status codes - Wikipedia, the free encyclopedia") symfony gives you an easy way in doing so. Especially while you are delivering dynamic content, it might not be that easy to determ whether the request has been modified or not. Sending the HTTP response header is one thing, later on you have to check against the If-Modified-Since HTTP request header sent to your application.
+excerpt: As there are many situations in which you might want to use the HTTP status code ["304 - Not Modified"](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection "List of HTTP status codes - Wikipedia, the free encyclopedia") symfony gives you an easy way in doing so. Especially while you are delivering dynamic content, it might not be that easy to determ whether the request has been modified or not. Sending the HTTP response header is one thing, later on you have to check against the If-Modified-Since HTTP request header sent to your application.
 ---
-As there are many situations in which you might want to use the HTTP status code ["304 - Not Modified"](http://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection "List of HTTP status codes - Wikipedia, the free encyclopedia") symfony gives you an easy way in doing so. Especially while you are delivering dynamic content, it might not be that easy to determ whether the request has been modified or not. Sending the HTTP response header is one thing, later on you have to check against the If-Modified-Since HTTP request header sent to your application.
+As there are many situations in which you might want to use the HTTP status code ["304 - Not Modified"](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#3xx_Redirection "List of HTTP status codes - Wikipedia, the free encyclopedia") symfony gives you an easy way in doing so. Especially while you are delivering dynamic content, it might not be that easy to determ whether the request has been modified or not. Sending the HTTP response header is one thing, later on you have to check against the If-Modified-Since HTTP request header sent to your application.
 
 ## Use-Cases
 
-I got a [simple feed](http://bestof.wstar.de/feed "Best of White Star Clan") using this little setup. Let's face the use cases first.
+I got a [simple feed](https://bestof.wstar.de/feed "Best of White Star Clan") using this little setup. Let's face the use cases first.
 
 1. The user does the first request and gets the feed filled with the latest items.
 2. The user does the second request and between the first and this one, nothing has changed.

@@ -11,7 +11,7 @@ Creating a bundle for Symfony is one of the most misunderstood topics. This topi
 
 Back then, just for the sake of "learning by doing", I created a bundle which is now available as [HavvgDRYBundle](https://github.com/havvg/HavvgDRYBundle). Over the time I decided to try a completely bundle-free edition and ended up with [a small sandbox](https://github.com/havvg/symfony-sandbox).
 
-This posting is based on a "Lightning Rant" I did with [Marc Aschmann](http://marc-aschmann.de/) at the [Symfony Live Berlin 2014](http://berlin2014.live.symfony.com/) event. It was a decision of five minutes with nearly no preparations. It was provocative and cheeky. However I got quite some feedback on this rant from different companies and developers at the site, to explain in more details. Those discussions were awesome. I'm also holding a talk on this topic at Symfony meetups.
+This posting is based on a "Lightning Rant" I did with [Marc Aschmann](https://marc-aschmann.de/) at the [Symfony Live Berlin 2014](https://berlin2014.live.symfony.com/) event. It was a decision of five minutes with nearly no preparations. It was provocative and cheeky. However I got quite some feedback on this rant from different companies and developers at the site, to explain in more details. Those discussions were awesome. I'm also holding a talk on this topic at Symfony meetups.
 
 > There is a Bundle for that
 
@@ -21,11 +21,11 @@ While working with Symfony, you will hear this sentence a lot, and while true it
 
 This posting refers to "Bundle" as any bundle, that is created within the "Acme" namespace, is project specific and not distributed among other projects. The easiest way you will identify those bundles: You don't require them like third-party bundles (e.g. using Composer).
 
-The big challenge when dealing with the topic "Bundle" is the [Symfony documentation](http://symfony.com/doc/2.7/index.html) itself. It is a very good documentation and will provide anyone, who wants to use Symfony with any information necessary to get things rolling. However there are some common pitfalls that come with any documentation, no matter how good it is. The documentation is an abstract of what's actually possible. It provides the easiest way to achieve things and makes you reach your goal fast. In order to support you this way, it's a very simplified view on problems. It's the basic solution. It's use case specific and while backreferences exist, the documentation is not granting you the total view on everything. It focuses on a problem and discards other aspects for the sake of getting you on the spot and solving the specific issue. This often leads to wrongly applied patterns in applications using the Symfony framework. You should always question the documentation you are reading and consult other resources, too.
+The big challenge when dealing with the topic "Bundle" is the [Symfony documentation](https://symfony.com/doc/2.7/index.html) itself. It is a very good documentation and will provide anyone, who wants to use Symfony with any information necessary to get things rolling. However there are some common pitfalls that come with any documentation, no matter how good it is. The documentation is an abstract of what's actually possible. It provides the easiest way to achieve things and makes you reach your goal fast. In order to support you this way, it's a very simplified view on problems. It's the basic solution. It's use case specific and while backreferences exist, the documentation is not granting you the total view on everything. It focuses on a problem and discards other aspects for the sake of getting you on the spot and solving the specific issue. This often leads to wrongly applied patterns in applications using the Symfony framework. You should always question the documentation you are reading and consult other resources, too.
 
 ## Facing the Bundle
 
-The following quotes are from the [Symfony Quicktour "The Architecture"](http://symfony.com/doc/2.7/quick_tour/the_architecture.html#understanding-the-bundle-system).
+The following quotes are from the [Symfony Quicktour "The Architecture"](https://symfony.com/doc/2.7/quick_tour/the_architecture.html#understanding-the-bundle-system).
 
 > **A bundle is kind of like a plugin in other software.** So why is it called a bundle and not a plugin? This is because **everything is a bundle in Symfony**, from the core framework features **to the code you write for your application**.
 
@@ -92,7 +92,7 @@ Removing all bundles completely is a tedious amount of work with no real benefit
 
 My suggestion would be creating one bundle to integrate your application with the framework - "AppBundle". It's the easiest way to go, and by having only one bundle it will save you much time as you don't have decisions to make like "Another bundle, or X, or Y?" - extend the configuration of the bundle to propagate your systems into the framework utilities.
 
-A few months ago the ["Best Practices"](http://symfony.com/doc/current/best_practices/index.html) have been released and beside the rage on the release management and its initial content raised in the community. I second roughly 25% of the best practices mentioned. However there is one point they got finally right.
+A few months ago the ["Best Practices"](https://symfony.com/doc/current/best_practices/index.html) have been released and beside the rage on the release management and its initial content raised in the community. I second roughly 25% of the best practices mentioned. However there is one point they got finally right.
 
 > **Create only one bundle called AppBundle** for your application logic.
 

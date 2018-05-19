@@ -7,7 +7,7 @@ title: couchdb on ubuntu Karmic Koala
 I need couchdb 0.10.0 as it provides JSONP support, so I installed the bleeding edge ubuntu Karmic Koala development branch, which ships couchdb 0.10.0. But when doing a simple curl request on the couchdb server, the connection was refused.
 
 ```bash
-$ curl -vX GET http://127.0.0.1:5984
+$ curl -vX GET https://127.0.0.1:5984
 * About to connect() to 127.0.0.1 port 5984 (#0)
 *   Trying 127.0.0.1... Connection refused
 * couldn't connect to host
@@ -24,7 +24,7 @@ $ sudo -u couchdb couchdb
 file:path_eval([".","/root"],".erlang"): permission denied
 Apache CouchDB 0.10.0 (LogLevel=info) is starting.
 Apache CouchDB has started. Time to relax.
-[info] [<0.1.0>] Apache CouchDB has started on http://127.0.0.1:5984/
+[info] [<0.1.0>] Apache CouchDB has started on https://127.0.0.1:5984/
 ```
 
 What's important on this output is the **permission denied** error. In order to get this solved, you can either change the log section in your `/etc/couchdb/local.ini` to a logfile couchdb is allowed to write to or you add the directory and the file with correct permissions that is defined in the `/etc/couchdb/default.ini` as follows.
@@ -38,10 +38,10 @@ $ chown -R couchdb:adm /var/log/couchdb/
 Now the logfile is setup correctly and you may request couchdb.
 
 ```bash
-$ curl -X GET http://127.0.0.1:5984
+$ curl -X GET https://127.0.0.1:5984
 {"couchdb":"Welcome","version":"0.10.0"}
  
-$ curl -X GET http://127.0.0.1:5984?callback=fnName
+$ curl -X GET https://127.0.0.1:5984?callback=fnName
 fnName({"couchdb":"Welcome","version":"0.10.0"});
 ```
 

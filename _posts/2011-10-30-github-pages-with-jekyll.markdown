@@ -6,7 +6,7 @@ tags:
     - jekyll
 excerpt: |
   Finally, my blog is now on [github:pages]!
-  [github:pages]: http://pages.github.com
+  [github:pages]: https://pages.github.com
 ---
 
 Finally, my blog is now on [github:pages]!
@@ -49,9 +49,9 @@ The same method can be used to put all pages in your sitemap, too. But your 404 
 
 An [example sitemap] is available on github, so is an [example configuration].
 
-[github:pages]: http://pages.github.com
+[github:pages]: https://pages.github.com
 [Jekyll]: https://github.com/mojombo/jekyll/
-[Liquid]: http://liquidmarkup.org/
+[Liquid]: https://liquidmarkup.org/
 [YAML Front Matter]: https://github.com/mojombo/jekyll/wiki/YAML-Front-Matter
 [example sitemap]: https://github.com/havvg/havvg.github.com/blob/master/sitemap.xml
 [example configuration]: https://github.com/havvg/havvg.github.com/blob/master/archive.html

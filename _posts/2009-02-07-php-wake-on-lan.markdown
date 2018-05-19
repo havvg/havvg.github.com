@@ -1,9 +1,9 @@
 --- 
 layout: post
 title: "PHP: Wake On LAN (WOL)"
-excerpt: Ich habe neben meinem Macbook natürlich auch einen Desktoprechner. Dieser läuft natürlich nicht den ganzen Tag durch, wer sollte auch die Stromkosten dafür aufbringen :). Dennoch wär es hilfreich, wenn ich den Rechner einfach hochfahren könnte - von überall. Die Technik dazu ist nichts Neues und trägt den passenden Namen "[Wake On LAN](http://de.wikipedia.org/wiki/Wake_On_LAN "Wake On LAN - Wikipedia")" (dt. Aufwecken über [LAN](http://de.wikipedia.org/wiki/Local_Area_Network "Local Area Network - Wikipedia")). Ich hab mir also einfach eine Funktion geschrieben, die genau diese Aufgabe in PHP widerspiegelt und erfüllt. Den kompletten Quellcode kann man hier einfach downloaden und direkt benutzen.
+excerpt: Ich habe neben meinem Macbook natürlich auch einen Desktoprechner. Dieser läuft natürlich nicht den ganzen Tag durch, wer sollte auch die Stromkosten dafür aufbringen :). Dennoch wär es hilfreich, wenn ich den Rechner einfach hochfahren könnte - von überall. Die Technik dazu ist nichts Neues und trägt den passenden Namen "[Wake On LAN](https://de.wikipedia.org/wiki/Wake_On_LAN "Wake On LAN - Wikipedia")" (dt. Aufwecken über [LAN](https://de.wikipedia.org/wiki/Local_Area_Network "Local Area Network - Wikipedia")). Ich hab mir also einfach eine Funktion geschrieben, die genau diese Aufgabe in PHP widerspiegelt und erfüllt. Den kompletten Quellcode kann man hier einfach downloaden und direkt benutzen.
 ---
-Ich habe neben meinem Macbook natürlich auch einen Desktoprechner. Dieser läuft natürlich nicht den ganzen Tag durch, wer sollte auch die Stromkosten dafür aufbringen :). Dennoch wär es hilfreich, wenn ich den Rechner einfach hochfahren könnte - von überall. Die Technik dazu ist nichts Neues und trägt den passenden Namen "[Wake On LAN](http://de.wikipedia.org/wiki/Wake_On_LAN "Wake On LAN - Wikipedia")" (dt. Aufwecken über [LAN](http://de.wikipedia.org/wiki/Local_Area_Network "Local Area Network - Wikipedia")). Ich hab mir also einfach eine Funktion geschrieben, die genau diese Aufgabe in PHP widerspiegelt und erfüllt. Den kompletten Quellcode kann man hier einfach downloaden und direkt benutzen.
+Ich habe neben meinem Macbook natürlich auch einen Desktoprechner. Dieser läuft natürlich nicht den ganzen Tag durch, wer sollte auch die Stromkosten dafür aufbringen :). Dennoch wär es hilfreich, wenn ich den Rechner einfach hochfahren könnte - von überall. Die Technik dazu ist nichts Neues und trägt den passenden Namen "[Wake On LAN](https://de.wikipedia.org/wiki/Wake_On_LAN "Wake On LAN - Wikipedia")" (dt. Aufwecken über [LAN](https://de.wikipedia.org/wiki/Local_Area_Network "Local Area Network - Wikipedia")). Ich hab mir also einfach eine Funktion geschrieben, die genau diese Aufgabe in PHP widerspiegelt und erfüllt. Den kompletten Quellcode kann man hier einfach downloaden und direkt benutzen.
 
 Hier der vollständige und dokumentierte Code.
 ```php
@@ -24,9 +24,9 @@ class WakeOnLANException extends Exception { }
 /**
  * a function to wake any computer using "Wake on LAN"
  *
- * @link http://en.wikipedia.org/wiki/Wake-on-LAN
+ * @link https://en.wikipedia.org/wiki/Wake-on-LAN
  * @author Toni Uebernickel <tuebernickel@whitestarprogramming.de>
- * @copyright http://sam.zoy.org/wtfpl/
+ * @copyright https://sam.zoy.org/wtfpl/
  *
  * @version 1.0
  * @todo 1.1 Check for valid (reachable) host.
@@ -35,7 +35,7 @@ class WakeOnLANException extends Exception { }
  * @example WakeOnLAN('13:37:13:37:13:37', 'host.domain');
  * @example WakeOnLAN('13:37:13:37:13:37', '10.65.0.151', 7);
  *
- * @see http://www.php.net/fsockopen
+ * @see https://www.php.net/fsockopen
  * @throws SocketConnectionException if connection could not be established ErrorCode: defined by fsockopen
  * @throws WakeOnLANException if amount of sent bytes is not 102 (needed for WOL) ErrorCode: E_ERROR
  *
@@ -77,14 +77,14 @@ function WakeOnLAN($macAddress, $hostAddress, $hostPort = 9)
     /**
      * Initialize the first six bytes for the Wake On LAN magic packet.
      *
-     * @see http://en.wikipedia.org/wiki/Wake-on-LAN#Magic_Packet
+     * @see https://en.wikipedia.org/wiki/Wake-on-LAN#Magic_Packet
      */
     $WakeOnLANSequence = "\xFF\xFF\xFF\xFF\xFF\xFF";
  
     /**
      * Strip MAC address to an hexidecimal string.
      *
-     * @see http://en.wikipedia.org/wiki/MAC_address
+     * @see https://en.wikipedia.org/wiki/MAC_address
      *
      * This call removes all characters but 0 to 9 and A to F (a to f).
      */
@@ -97,7 +97,7 @@ function WakeOnLAN($macAddress, $hostAddress, $hostPort = 9)
      * hexdec(): convert the set to decimal values used by ASCII
      * chr(): convert the decimal value into the ASCII character
      *
-     * @see http://en.wikipedia.org/wiki/ASCII
+     * @see https://en.wikipedia.org/wiki/ASCII
      */
     for ($i = 0; $i < 12; $i += 2)
     {
@@ -107,7 +107,7 @@ function WakeOnLAN($macAddress, $hostAddress, $hostPort = 9)
     /**
      * Complete the magic packet by adding the MAC address 16 times after the initialized six byte sequence.
      *
-     * @see http://en.wikipedia.org/wiki/Wake-on-LAN#Magic_Packet
+     * @see https://en.wikipedia.org/wiki/Wake-on-LAN#Magic_Packet
      */
     for ($i = 0; $i < 16; $i++)
     {
@@ -134,7 +134,7 @@ function WakeOnLAN($macAddress, $hostAddress, $hostPort = 9)
        * Check your NAT and any other network configuration between this script server and the destination host.
        * Check the hosts' configuration about Wake On LAN.
        *
-       * @see http://en.wikipedia.org/wiki/Wake-on-LAN#Magic_Packet
+       * @see https://en.wikipedia.org/wiki/Wake-on-LAN#Magic_Packet
        */
       return true;
     }

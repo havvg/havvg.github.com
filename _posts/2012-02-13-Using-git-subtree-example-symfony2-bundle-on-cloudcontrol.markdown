@@ -83,5 +83,5 @@ As you can see, the tree of `6dee0ac` (the first commit in `shared-bundle/master
 `bcd30d9` is the result of the `git commit` after `git read-tree` which merged both trees (`6dee0ac` under the prefix directory and `938473b`).
 `25f6757` is a commit in `shared-bundle/master` which is merged by the `66815de` commit using `git pull`.
 
-[Symfony2]: http://symfony.com
+[Symfony2]: https://symfony.com
 [cloudControl]: https://www.cloudcontrol.com/

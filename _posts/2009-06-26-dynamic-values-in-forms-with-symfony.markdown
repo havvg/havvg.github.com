@@ -5,7 +5,7 @@ excerpt: Let's imagine you have a form set up and want to add some dynamic value
 ---
 Let's imagine you have a form set up and want to add some dynamic values to the object being saved by this form after the form has been submitted by the visitor.
 
-The example model (`wspNopasteEntry`) below has a property `created_by` which refers to a `sfGuardUser` (or anonymous). So, at first you have to unset the form field for the user using [the inherited setup() method of the form](http://www.symfony-project.org/api/1_2/sfForm#method_setup "symfony API » sfForm Class") itself.
+The example model (`wspNopasteEntry`) below has a property `created_by` which refers to a `sfGuardUser` (or anonymous). So, at first you have to unset the form field for the user using [the inherited setup() method of the form](https://www.symfony-project.org/api/1_2/sfForm#method_setup "symfony API » sfForm Class") itself.
 
 ```php
 <?php
@@ -19,7 +19,7 @@ public function setup()
 }
 ```
 
-Now, the user has no field to enter any kind of user id. While processing the form, right before you save the created instance of your object to the database, you can modify the object using [the getObject() method of sfFormPropel](http://www.symfony-project.org/api/1_2/sfFormPropel#method_getobject "symfony API » sfFormPropel Class").
+Now, the user has no field to enter any kind of user id. While processing the form, right before you save the created instance of your object to the database, you can modify the object using [the getObject() method of sfFormPropel](https://www.symfony-project.org/api/1_2/sfFormPropel#method_getobject "symfony API » sfFormPropel Class").
 
 ```php
 <?php

@@ -1,9 +1,9 @@
 --- 
 layout: post
 title: "Tutorial: Fenster an Hilfslinien ausrichten"
-excerpt: Wer kennt es nicht? In heutigen Anwendungen wird es dem Benutzer immer einfacher gemacht, Ordnung zu halten. Einen kleinen aber feinen Beitrag leisten sogenannte Hilfslinien. Anwendungen, die mit mehreren Objekten arbeiten, nutzen diese Hilfslinien unter Anderem auch, um die Objekte zueinander auszurichten. Ich hab heute für [das AzSMRC webUI](http://azsmrc.sourceforge.net/ "AzSMRC Home") genau dies in Javascript implementiert.
+excerpt: Wer kennt es nicht? In heutigen Anwendungen wird es dem Benutzer immer einfacher gemacht, Ordnung zu halten. Einen kleinen aber feinen Beitrag leisten sogenannte Hilfslinien. Anwendungen, die mit mehreren Objekten arbeiten, nutzen diese Hilfslinien unter Anderem auch, um die Objekte zueinander auszurichten. Ich hab heute für [das AzSMRC webUI](https://azsmrc.sourceforge.net/ "AzSMRC Home") genau dies in Javascript implementiert.
 ---
-Wer kennt es nicht? In heutigen Anwendungen wird es dem Benutzer immer einfacher gemacht, Ordnung zu halten. Einen kleinen aber feinen Beitrag leisten sogenannte Hilfslinien. Anwendungen, die mit mehreren Objekten arbeiten, nutzen diese Hilfslinien unter Anderem auch, um die Objekte zueinander auszurichten. Ich hab heute für [das AzSMRC webUI](http://azsmrc.sourceforge.net/ "AzSMRC Home") genau dies in Javascript implementiert.
+Wer kennt es nicht? In heutigen Anwendungen wird es dem Benutzer immer einfacher gemacht, Ordnung zu halten. Einen kleinen aber feinen Beitrag leisten sogenannte Hilfslinien. Anwendungen, die mit mehreren Objekten arbeiten, nutzen diese Hilfslinien unter Anderem auch, um die Objekte zueinander auszurichten. Ich hab heute für [das AzSMRC webUI](https://azsmrc.sourceforge.net/ "AzSMRC Home") genau dies in Javascript implementiert.
 
 Das AzSMRC webUI arbeitet mit mehreren Fenstern, die freibeweglich sind. Ich hatte vor ein paar Tagen mal wieder eine dieser Anwendungen gesehen, in denen Hilfslinien zur Ausrichtung der Objekte (in diesem Fall die Fenster) genutzt werden. Da dachte ich mir, dies auch für das AzSMRC webUI zu implementieren.
 
@@ -11,11 +11,11 @@ Das AzSMRC webUI arbeitet mit mehreren Fenstern, die freibeweglich sind. Ich hat
 
 Was im Grunde gemacht werden soll, ist Folgendes. Es gibt mehrere Fenster, die eine bestimmte Position auf dem Bildschirm haben und eine bestimmte Höhe und Breite. Sie sind rechteckig, haben also vier Kanten. Ein weiteres Fenster soll sich nun _an einer gedachten Hilfslinie ausrichten_. So soll zum Beispiel Fenster A auf der selben Höhe sein wie Fenster B, wenn ich Fenster A auf dem Bildschirm bewege.
 
-<object class="youtube" height="344" width="425"><param name="movie" value="http://www.youtube.com/v/pjDqZVTtzrI&hl=de&fs=1" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed allowfullscreen="true" src="http://www.youtube.com/v/pjDqZVTtzrI&hl=de&fs=1" allowscriptaccess="always" type="application/x-shockwave-flash" height="344" width="425"></embed></object>
+<object class="youtube" height="344" width="425"><param name="movie" value="https://www.youtube.com/v/pjDqZVTtzrI&hl=de&fs=1" /><param name="allowFullScreen" value="true" /><param name="allowscriptaccess" value="always" /><embed allowfullscreen="true" src="https://www.youtube.com/v/pjDqZVTtzrI&hl=de&fs=1" allowscriptaccess="always" type="application/x-shockwave-flash" height="344" width="425"></embed></object>
 
 ## Hilfslinien zur Ausrichtung bestimmen
 
-[Das AzSMRC webUI](http://azsmrc.sourceforge.net/ "AzSMRC Home") speichert die x- und y-Koordinaten jedes offenen Fensters in einer Liste. Jeder Listeneintrag repräsentiert ein Fenster und ist selber wiederum eine Liste von vier Koordinaten. Wird ein Fenster geschlossen, so wird der entsprechende Eintrag entfernt.
+[Das AzSMRC webUI](https://azsmrc.sourceforge.net/ "AzSMRC Home") speichert die x- und y-Koordinaten jedes offenen Fensters in einer Liste. Jeder Listeneintrag repräsentiert ein Fenster und ist selber wiederum eine Liste von vier Koordinaten. Wird ein Fenster geschlossen, so wird der entsprechende Eintrag entfernt.
 
 <dl>
   <dt>x1</dt><dd>linke Kante</dd>

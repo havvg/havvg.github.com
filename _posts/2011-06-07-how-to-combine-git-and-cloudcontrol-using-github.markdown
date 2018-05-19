@@ -174,7 +174,7 @@ co = checkout
 di = diff
 ```
 
-[Tower]: http://www.git-tower.com/
+[Tower]: https://www.git-tower.com/
 [create a new repository]: https://github.com/repositories/new
-[githubcctut.cloudcontrolled.com domain]: http://githubcctut.cloudcontrolled.com/README
+[githubcctut.cloudcontrolled.com domain]: https://githubcctut.cloudcontrolled.com/README
 [the admin interface of your github account]: https://github.com/account/admin

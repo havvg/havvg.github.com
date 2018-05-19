@@ -185,5 +185,5 @@ services:
 ```
 
 [previous post]: /2011/11/25/how-to-extend-form-fields-in-symfony2.html
-[the form documentation]: http://symfony.com/doc/2.1/cookbook/form/form_customization.html#adding-help-messages
-[autocomplete at whatwg]: http://wiki.whatwg.org/wiki/Autocomplete_Types
+[the form documentation]: https://symfony.com/doc/2.1/cookbook/form/form_customization.html#adding-help-messages
+[autocomplete at whatwg]: https://wiki.whatwg.org/wiki/Autocomplete_Types

@@ -2,9 +2,9 @@
 layout: post
 title: ORM Designer
 excerpt: |
-  I were asked to take a look into [ORM Designer by Inventic s.r.o.](http://www.orm-designer.com/ "Website of ORM Designer") two weeks ago. I tested the software and here is my little piece of review as a developer.
+  I were asked to take a look into [ORM Designer by Inventic s.r.o.](https://www.orm-designer.com/ "Website of ORM Designer") two weeks ago. I tested the software and here is my little piece of review as a developer.
 ---
-I were asked to take a look into [ORM Designer by Inventic s.r.o.](http://www.orm-designer.com/ "Website of ORM Designer") two weeks ago. I tested the software and here is my little piece of review as a developer.
+I were asked to take a look into [ORM Designer by Inventic s.r.o.](https://www.orm-designer.com/ "Website of ORM Designer") two weeks ago. I tested the software and here is my little piece of review as a developer.
 
 ## Disclaimer
 

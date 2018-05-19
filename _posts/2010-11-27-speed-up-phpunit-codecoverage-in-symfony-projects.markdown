@@ -1,9 +1,9 @@
 ---
 layout: post
 title: speed up PHPUnit CodeCoverage in symfony projects
-excerpt: Well, [PHPUnit CodeCoverage](http://www.phpunit.de) is pretty nice and exports some nice HTML files to take a look into. However, a project most often contains more than just PHP files and for a symfony project this could be the phpunit.xml.dist. It removes all folders from your coverage report, that most likely are not your stuff. This one is based on the shipped file of [sfPHPUnit2Plugin](http://www.symfony-project.org/plugins/sfPHPUnit2Plugin). The relevant part is the `<filter>` section.
+excerpt: Well, [PHPUnit CodeCoverage](https://www.phpunit.de) is pretty nice and exports some nice HTML files to take a look into. However, a project most often contains more than just PHP files and for a symfony project this could be the phpunit.xml.dist. It removes all folders from your coverage report, that most likely are not your stuff. This one is based on the shipped file of [sfPHPUnit2Plugin](https://www.symfony-project.org/plugins/sfPHPUnit2Plugin). The relevant part is the `<filter>` section.
 ---
-Well, [PHPUnit CodeCoverage](http://www.phpunit.de) is pretty nice and exports some nice HTML files to take a look into. However, a project most often contains more than just PHP files and for a symfony project this could be the phpunit.xml.dist. It removes all folders from your coverage report, that most likely are not your stuff. This one is based on the shipped file of [sfPHPUnit2Plugin](http://www.symfony-project.org/plugins/sfPHPUnit2Plugin). The relevant part is the `<filter>` section.
+Well, [PHPUnit CodeCoverage](https://www.phpunit.de) is pretty nice and exports some nice HTML files to take a look into. However, a project most often contains more than just PHP files and for a symfony project this could be the phpunit.xml.dist. It removes all folders from your coverage report, that most likely are not your stuff. This one is based on the shipped file of [sfPHPUnit2Plugin](https://www.symfony-project.org/plugins/sfPHPUnit2Plugin). The relevant part is the `<filter>` section.
 
 ```xml
 <phpunit

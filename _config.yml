@@ -19,7 +19,7 @@ assets:
     compress:
         css: true
 
-url: "http://toni.uebernickel.info"
+url: "https://toni.uebernickel.info"
 baseurl: ""
 
 title: havvg's playground

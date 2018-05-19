@@ -2,9 +2,9 @@
 layout: post
 title: single table inheritance pattern in symfony using propel
 excerpt: |
-  Rails is doing it, Java is doing it very similar, you can do it in symfony, too: make use of the [Single Table Inheritance pattern](http://en.wikipedia.org/wiki/Single_Table_Inheritance "Single Table Inheritance - Wikipedia, the free encyclopedia").
+  Rails is doing it, Java is doing it very similar, you can do it in symfony, too: make use of the [Single Table Inheritance pattern](https://en.wikipedia.org/wiki/Single_Table_Inheritance "Single Table Inheritance - Wikipedia, the free encyclopedia").
 ---
-Rails is doing it, Java is doing it very similar, you can do it in symfony, too: make use of the [Single Table Inheritance pattern](http://en.wikipedia.org/wiki/Single_Table_Inheritance "Single Table Inheritance - Wikipedia, the free encyclopedia").
+Rails is doing it, Java is doing it very similar, you can do it in symfony, too: make use of the [Single Table Inheritance pattern](https://en.wikipedia.org/wiki/Single_Table_Inheritance "Single Table Inheritance - Wikipedia, the free encyclopedia").
 
 ## What's STI?
 
